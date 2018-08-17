@@ -1,7 +1,6 @@
-let getStringArray = (value: string): string[] => {
+let getArray = <T>(value: T): T[] => {
   return [value, value, value]
 }
 
-let getNumberArray = (value: number): number[] => {
-  return [value, value, value]
-}
+console.log(getArray<number>(3))
+console.log(getArray<string>('foo'))
