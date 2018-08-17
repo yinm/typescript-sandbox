@@ -1,6 +1,14 @@
-let getArray = <T>(value: T): T[] => {
-  return [value, value, value]
+class MyData<T> {
+  constructor(
+    public value: T
+  ) {}
+
+  getArray(): T[] {
+    return [this.value, this.value, this.value]
+  }
 }
 
-console.log(getArray<number>(3))
-console.log(getArray<string>('foo'))
+const v1 = new MyData<string>('hello')
+console.log(v1.getArray())
+const v2 = new MyData<number>(123)
+console.log(v2.getArray())
