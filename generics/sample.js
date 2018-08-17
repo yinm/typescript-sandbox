@@ -7,7 +7,9 @@ var MyData = /** @class */ (function () {
     };
     return MyData;
 }());
-var v1 = new MyData('hello');
+var result = {
+    a: 3,
+    b: 5
+};
+var v1 = new MyData(result);
 console.log(v1.getArray());
-var v2 = new MyData(123);
-console.log(v2.getArray());

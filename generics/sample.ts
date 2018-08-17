@@ -1,4 +1,9 @@
-class MyData<T> {
+interface Result {
+  a: number
+  b: number
+}
+
+class MyData<T extends Result> {
   constructor(
     public value: T
   ) {}
@@ -8,7 +13,10 @@ class MyData<T> {
   }
 }
 
-const v1 = new MyData<string>('hello')
+const result = {
+  a: 3,
+  b: 5
+}
+
+const v1 = new MyData<Result>(result)
 console.log(v1.getArray())
-const v2 = new MyData<number>(123)
-console.log(v2.getArray())
