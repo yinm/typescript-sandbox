@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "ourDir": "./built/",
+    "outDir": "./built/",
     "sourceMap": true,
     "strict": true,
     "noImplicitReturns": true,
