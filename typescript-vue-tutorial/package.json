@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "build": "webpack"
+  },
   "devDependencies": {
     "css-loader": "^1.0.0",
     "ts-loader": "^4.5.0",
