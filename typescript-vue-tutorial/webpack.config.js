@@ -1,3 +1,5 @@
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
+
 module.exports = {
   mode: 'development',
 
@@ -48,5 +50,8 @@ module.exports = {
     alias: {
       vue: 'vue/dist/vue.js'
     }
-  }
+  },
+  plugins: [
+    new VueLoaderPlugin()
+  ]
 };
