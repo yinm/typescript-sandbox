@@ -7,34 +7,28 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+  import { Vue, Component, Prop } from 'vue-property-decorator'
 
-export default Vue.extend({
-  props: [
-    'name',
-    'initialEnthusiasm'
-  ],
-  data() {
-    return {
-      enthusiasm: this.initialEnthusiasm,
-    }
-  },
-  methods: {
+  @Component
+  export default class HelloDecorator extends Vue {
+    @Prop() name!: string
+    @Prop() initialEnthusiasm!: number
+
+    enthusiasm = this.initialEnthusiasm
+
     increment() {
       this.enthusiasm++
-    },
+    }
     decrement() {
       if (this.enthusiasm > 1) {
         this.enthusiasm--
       }
-    },
-  },
-  computed: {
-    exclamationMarks(): string {
+    }
+
+    get exclamationMarks(): string {
       return Array(this.enthusiasm + 1).join('!')
     }
   }
-})
 </script>
 
 <style>
