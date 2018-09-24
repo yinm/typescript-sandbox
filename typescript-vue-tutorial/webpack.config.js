@@ -9,6 +9,7 @@ module.exports = {
     path: `${__dirname}/dist`,
     filename: 'build.js'
   },
+
   module: {
     rules: [
       {
@@ -28,6 +29,13 @@ module.exports = {
         ]
       },
       {
+        test: /\.css$/,
+        use: [
+          'vue-style-loader',
+          'css-loader'
+        ]
+      },
+      {
         test: /\.(png|jpg|gif|svg)$/,
         use: [
           {
@@ -40,6 +48,7 @@ module.exports = {
       }
     ]
   },
+
   resolve: {
     extensions: [
       '.ts',
@@ -51,7 +60,8 @@ module.exports = {
       vue: 'vue/dist/vue.js'
     }
   },
+
   plugins: [
     new VueLoaderPlugin()
   ]
-};
+}

@@ -10,7 +10,7 @@ export default Vue.extend({
   `,
   props: [
     'name',
-    'initialEnthusiasm',
+    'initialEnthusiasm'
   ],
   data() {
     return {
@@ -18,7 +18,9 @@ export default Vue.extend({
     }
   },
   methods: {
-    increment() { this.enthusiasm++ },
+    increment() {
+      this.enthusiasm++
+    },
     decrement() {
       if (this.enthusiasm > 1) {
         this.enthusiasm--
