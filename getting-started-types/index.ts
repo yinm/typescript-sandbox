@@ -1,19 +1,10 @@
-interface Hoge {
-  foo: string
-  bar: number
-}
-
-interface Piyo {
-  foo: number
-  baz: boolean
-}
-
-function useHogePiyo(obj: Hoge | Piyo): void {
-  if ('bar' in obj) {
-    console.log('Hoge', obj.bar)
+function func(value: string | number): number {
+  if ('string' === typeof value) {
+    return value.length
   } else {
-    console.log('Piyo', obj.baz)
+    return value
   }
 }
 
-useHogePiyo({foo: 0, baz: true})
+console.log(func('foo'))
+console.log(func(10))
