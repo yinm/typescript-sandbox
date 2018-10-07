@@ -1,5 +1,9 @@
 "use strict";
-var value = 'foo';
-value = 100;
-value = 'bar';
-value = true;
+var obj = {
+    foo: 'hello',
+    bar: 0
+};
+var obj2 = {
+    foo: 1,
+    baz: true
+};
