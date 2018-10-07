@@ -1,11 +1,11 @@
 "use strict";
 function func(value) {
-    if ('string' === typeof value) {
+    if (value != null) {
         return value.length;
     }
     else {
-        return value;
+        return 0;
     }
 }
 console.log(func('foo'));
-console.log(func(10));
+console.log(func(null));

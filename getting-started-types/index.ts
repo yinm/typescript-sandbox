@@ -1,10 +1,10 @@
-function func(value: string | number): number {
-  if ('string' === typeof value) {
+function func(value: string | null): number {
+  if (value != null) {
     return value.length
   } else {
-    return value
+    return 0
   }
 }
 
 console.log(func('foo'))
-console.log(func(10))
+console.log(func(null))
