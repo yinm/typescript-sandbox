@@ -1,5 +1,4 @@
 "use strict";
-var obj = { foo: 'Hey!' };
-var obj2 = obj;
-obj2.foo = 'Hi';
-console.log(obj.foo);
+var obj = {};
+var num = obj.foo;
+var num2 = obj.bar;
