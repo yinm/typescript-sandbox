@@ -1,12 +1,7 @@
-function foo(): void {
-  console.log('hello')
+class Foo {
+  method(): void {
+    console.log('Hello, world!')
+  }
 }
 
-function bar(): undefined {
-  console.log('world')
-}
-
-function baz(): void {
-  console.log('typescript')
-  return undefined
-}
+const obj: Foo = new Foo()
