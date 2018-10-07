@@ -1,2 +1,9 @@
-let a: 'foo' = 'foo'
-a = 'bar'
+interface MyObj {
+  foo: string
+  bar: number
+}
+
+const a: MyObj = {
+  foo: 'foo',
+  bar: 3,
+}
