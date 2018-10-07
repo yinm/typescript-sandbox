@@ -1,6 +1,7 @@
-const foo: [string, number] = ['foo', 5]
-const str: string = foo[0]
+const tuple: [string, number] = ['foo', 3]
 
-function makePair(x: string, y: number): [string, number] {
-  return [x, y]
-}
+tuple.pop()
+tuple.push('Hey!')
+
+const num: number = tuple[1]
+console.log(num)

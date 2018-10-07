@@ -1,6 +1,6 @@
 "use strict";
-var foo = ['foo', 5];
-var str = foo[0];
-function makePair(x, y) {
-    return [x, y];
-}
+var tuple = ['foo', 3];
+tuple.pop();
+tuple.push('Hey!');
+var num = tuple[1];
+console.log(num);
