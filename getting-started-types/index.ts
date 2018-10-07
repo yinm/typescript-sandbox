@@ -3,11 +3,9 @@ interface MyObj {
   bar?: number
 }
 
-let obj: MyObj = {
-  foo: 'string'
+function func(obj: MyObj): number {
+  return obj.bar != null ? obj.bar * 100 : 0
 }
 
-obj = {
-  foo: 'foo',
-  bar: 100,
-}
+console.log(func({foo: 'aa', bar: 10}))
+console.log(func({foo: 'aa'}))
