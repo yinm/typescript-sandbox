@@ -3,11 +3,16 @@ interface MyObj {
   bar: number
 }
 
-const a: MyObj = {
-  foo: 'foo',
-  bar: 'BARBARBAR',
+interface MyObj2 {
+  foo: string
 }
 
-const b: MyObj = {
+const a: MyObj = {
   foo: 'foo',
+  bar: 3
 }
+
+const b: MyObj2 = a
+
+console.log(a)
+console.log(b)

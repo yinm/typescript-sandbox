@@ -1,8 +1,8 @@
 "use strict";
 var a = {
     foo: 'foo',
-    bar: 'BARBARBAR',
+    bar: 3
 };
-var b = {
-    foo: 'foo',
-};
+var b = a;
+console.log(a);
+console.log(b);
