@@ -1,3 +1,3 @@
 "use strict";
-var a = null;
-var b = a;
+var a = 'foo';
+var b = 'foo';
