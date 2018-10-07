@@ -1,17 +1,10 @@
 interface MyObj {
   foo: string
-  bar: number
 }
 
-interface MyObj2 {
-  foo: string
+function func(obj: MyObj): void {
+  console.log(obj)
 }
 
-const b: MyObj2 = {
-  foo: 'foo',
-  bar: 3,
-}
-
-const c: MyObj2 = {
-  foo: 'foo',
-}
+func({foo: 'foo', bar: 3})
+func({foo: 'foo'})

@@ -1,8 +1,6 @@
 "use strict";
-var b = {
-    foo: 'foo',
-    bar: 3,
-};
-var c = {
-    foo: 'foo',
-};
+function func(obj) {
+    console.log(obj);
+}
+func({ foo: 'foo', bar: 3 });
+func({ foo: 'foo' });
