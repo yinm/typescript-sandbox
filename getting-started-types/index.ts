@@ -1,2 +1,4 @@
-const a = 'foo'
-const b: 'bar' = a
+let a = 'foo'
+const b: string = a
+const c: 'foo' = a
+const d: 'bar' = a
