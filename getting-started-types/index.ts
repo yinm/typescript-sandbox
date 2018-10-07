@@ -1,5 +1,4 @@
-type NumAndStrings = [number, ...string[]]
+type T = [string, number?]
 
-const a1: NumAndStrings = [3, 'foo', 'bar']
-const a2: NumAndStrings = [5]
-const a3: NumAndStrings = ['foo', 'bar']
+const t1: T = ['foo']
+const t2: T = ['foo', 3]

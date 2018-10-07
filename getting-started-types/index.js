@@ -1,4 +1,3 @@
 "use strict";
-var a1 = [3, 'foo', 'bar'];
-var a2 = [5];
-var a3 = ['foo', 'bar'];
+var t1 = ['foo'];
+var t2 = ['foo', 3];
