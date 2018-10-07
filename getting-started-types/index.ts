@@ -7,12 +7,11 @@ interface MyObj2 {
   foo: string
 }
 
-const a: MyObj = {
+const b: MyObj2 = {
   foo: 'foo',
-  bar: 3
+  bar: 3,
 }
 
-const b: MyObj2 = a
-
-console.log(a)
-console.log(b)
+const c: MyObj2 = {
+  foo: 'foo',
+}
