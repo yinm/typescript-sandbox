@@ -5,5 +5,9 @@ interface MyObj {
 
 const a: MyObj = {
   foo: 'foo',
-  bar: 3,
+  bar: 'BARBARBAR',
+}
+
+const b: MyObj = {
+  foo: 'foo',
 }
