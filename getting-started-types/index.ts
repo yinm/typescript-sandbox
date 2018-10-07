@@ -1,7 +1,5 @@
-const tuple: [string, number] = ['foo', 3]
+type NumAndStrings = [number, ...string[]]
 
-tuple.pop()
-tuple.push('Hey!')
-
-const num: number = tuple[1]
-console.log(num)
+const a1: NumAndStrings = [3, 'foo', 'bar']
+const a2: NumAndStrings = [5]
+const a3: NumAndStrings = ['foo', 'bar']
