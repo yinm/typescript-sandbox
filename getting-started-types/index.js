@@ -1,16 +1,6 @@
 "use strict";
-function map(obj, f) {
-    switch (obj.type) {
-        case 'Some':
-            return {
-                type: 'Some',
-                value: f(obj.value),
-            };
-        case 'None':
-            return {
-                type: 'None'
-            };
-        default:
-            return obj;
-    }
-}
+var obj = {
+    foo: 'fooooo',
+    bar: 3,
+    baz: true,
+};

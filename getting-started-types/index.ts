@@ -1,26 +1,15 @@
-interface Some<T> {
-  type: 'Some',
-  value: T
+interface Hoge {
+  foo: string
+  bar: number
 }
 
-interface None {
-  type: 'None'
+interface Piyo {
+  foo: string
+  baz: boolean
 }
 
-type Option<T> = Some<T> | None
-
-function map<T, U>(obj: Option<T>, f: (obj: T) => U): Option<U> {
-  switch (obj.type) {
-    case 'Some':
-      return {
-        type: 'Some',
-        value: f(obj.value),
-      }
-    case 'None':
-      return {
-        type: 'None'
-      }
-    default:
-      return obj
-  }
+const obj: Hoge & Piyo = {
+  foo: 'fooooo',
+  bar: 3,
+  baz: true,
 }
