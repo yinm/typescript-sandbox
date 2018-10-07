@@ -1,6 +1,6 @@
 "use strict";
-function identity(value) {
-    return value;
+var foo = ['foo', 5];
+var str = foo[0];
+function makePair(x, y) {
+    return [x, y];
 }
-var value = identity(3);
-var str = value;
