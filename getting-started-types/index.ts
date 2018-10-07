@@ -1,2 +1,2 @@
-const a: number = 3
+const a: null = null
 const b: string = a

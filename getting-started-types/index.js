@@ -1,2 +1,3 @@
-var a = 3;
+"use strict";
+var a = null;
 var b = a;
