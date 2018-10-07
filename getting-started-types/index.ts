@@ -8,14 +8,12 @@ interface Piyo {
   baz: boolean
 }
 
-type HogePiyo = Hoge | Piyo
-
-const obj: HogePiyo = {
-  foo: 'hello',
-  bar: 0
+function useHogePiyo(obj: Hoge | Piyo): void {
+  if ('bar' in obj) {
+    console.log('Hoge', obj.bar)
+  } else {
+    console.log('Piyo', obj.baz)
+  }
 }
 
-let obj2: HogePiyo = {
-  foo: 1,
-  baz: true
-}
+useHogePiyo({foo: 0, baz: true})
