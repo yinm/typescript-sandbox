@@ -1,4 +1,6 @@
-type T = [string, number?]
+type Args = [string, ...number[]]
 
-const t1: T = ['foo']
-const t2: T = ['foo', 3]
+const func = (f: string, ...args: Args) => args[0]
+
+const v1 = func('foo', 'bar')
+const v2 = func('foo', 'bar', 1, 2, 3)
