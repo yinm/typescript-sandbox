@@ -1,3 +1,3 @@
 "use strict";
 var f1 = function () { };
-var f2 = f1;
+f1('foo', 3);
