@@ -1,10 +1,2 @@
-interface MyObj {
-  foo: string
-}
-
-function func(obj: MyObj): void {
-  console.log(obj)
-}
-
-func({foo: 'foo', bar: 3})
-func({foo: 'foo'})
+const foo: number[] = [0, 1, 2, 3]
+foo.push(4)

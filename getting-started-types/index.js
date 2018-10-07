@@ -1,6 +1,3 @@
 "use strict";
-function func(obj) {
-    console.log(obj);
-}
-func({ foo: 'foo', bar: 3 });
-func({ foo: 'foo' });
+var foo = [0, 1, 2, 3];
+foo.push(4);
