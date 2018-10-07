@@ -1,5 +1,5 @@
 "use strict";
-function func(arg) {
-    return Number(arg);
-}
-var f = func;
+var a = function () { };
+var b = a;
+var c = function () { };
+var d = c;
