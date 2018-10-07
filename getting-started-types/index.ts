@@ -1,11 +1,8 @@
 interface MyObj {
-  foo: string
-  bar?: number
+  readonly foo: string
 }
 
-function func(obj: MyObj): number {
-  return obj.bar != null ? obj.bar * 100 : 0
+const obj: MyObj = {
+  foo: 'Hey!'
 }
-
-console.log(func({foo: 'aa', bar: 10}))
-console.log(func({foo: 'aa'}))
+obj.foo = 'aaaaaa'
