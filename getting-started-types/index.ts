@@ -1,7 +1,6 @@
-class Foo<T> {
-  constructor(obj: T) {}
+function identity<T>(value: T): T {
+  return value
 }
-const obj1 = new Foo<string>('foo')
 
-function func<T>(obj: T): void {}
-func<number>(3)
+const value = identity(3)
+const str: string = value

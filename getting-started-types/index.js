@@ -1,9 +1,6 @@
 "use strict";
-var Foo = /** @class */ (function () {
-    function Foo(obj) {
-    }
-    return Foo;
-}());
-var obj1 = new Foo('foo');
-function func(obj) { }
-func(3);
+function identity(value) {
+    return value;
+}
+var value = identity(3);
+var str = value;
