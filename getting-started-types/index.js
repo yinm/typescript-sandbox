@@ -1,10 +1,10 @@
 "use strict";
-var func = function (f) {
+var func = function () {
     var args = [];
-    for (var _i = 1; _i < arguments.length; _i++) {
-        args[_i - 1] = arguments[_i];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        args[_i] = arguments[_i];
     }
     return args[0];
 };
-var v1 = func('foo', 'bar');
-var v2 = func('foo', 'bar', 1, 2, 3);
+var strings = ['foo', 'bar', 'baz'];
+console.log(func.apply(void 0, strings));
