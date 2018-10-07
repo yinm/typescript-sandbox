@@ -1,3 +1,7 @@
 "use strict";
-var f = function (arg) { console.log(arg); };
-f(2);
+var Foo = /** @class */ (function () {
+    function Foo() {
+    }
+    return Foo;
+}());
+var f = Foo;
