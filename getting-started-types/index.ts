@@ -1,12 +1,9 @@
-interface MyFoo {
-  method: () => void
+interface Foo<S, T> {
+  foo: S
+  bar: T
 }
 
-class Foo {
-  method(): void {
-    console.log('Hello, world!')
-  }
+const obj: Foo<number, string> = {
+  foo: 3,
+  bar: 'hi'
 }
-
-const obj: MyFoo = new Foo()
-const obj2: Foo = obj
