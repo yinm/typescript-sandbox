@@ -1,1 +1,3 @@
-const n: never = 0
+declare const n: never
+
+const foo: string = n
