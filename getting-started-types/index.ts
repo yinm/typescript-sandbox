@@ -1,2 +1,2 @@
-const a: 'foo' = 'foo'
-const b: string = a
+const a = 'foo'
+const b: 'bar' = a
