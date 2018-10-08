@@ -1,7 +1,6 @@
-class Foo<T> {
-  constructor(obj: T) {}
+function func<T>(obj: T): void {
+  console.log(obj)
 }
-const obj1 = new Foo<string>('foo')
 
-function func<T>(obj: T): void { console.log(obj) }
-func<number>(3)
+const f: <T>(obj: T) => void = func
+f<number>(4)
