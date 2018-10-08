@@ -1,5 +1,11 @@
-function func(arg: string): number {
-  return Number(arg)
+interface MyObj {
+  foo: string
+  bar: number
 }
 
-const f: (foo: string) => number = func
+interface MyObj2 {
+  foo: string
+}
+
+const a: (obj: MyObj2) => void = () => {}
+const b: (obj: MyObj) => void = a
