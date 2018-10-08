@@ -10,5 +10,5 @@ interface MyObj2 {
 const a: (obj: MyObj2) => void = (arg) => { console.log(arg) }
 const b: (obj: MyObj) => void = a
 
-a({foo: 'aaaaaaaa'})
-b({foo: 'aaaaaaaa', bar: 10})
+a({foo: 'tttttt'})
+b({foo: 'aaaabbbbb', bar: 3})
