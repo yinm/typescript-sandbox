@@ -1,6 +1,9 @@
 "use strict";
-function func(obj) {
-    console.log(obj);
+function identity(value) {
+    return value;
 }
-var f = func;
-f(4);
+var value = identity(5);
+var str = value;
+var num = value;
+var yes5 = value;
+var no5 = value;
