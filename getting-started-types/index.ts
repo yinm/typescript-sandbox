@@ -1,14 +1,4 @@
-interface MyObj {
-  foo: string
-  bar: number
-}
+const func = (foo: string, ...bar: number[]) => bar
 
-interface MyObj2 {
-  foo: string
-}
-
-const a: (obj: MyObj2) => void = (arg) => { console.log(arg) }
-const b: (obj: MyObj) => void = a
-
-a({foo: 'tttttt'})
-b({foo: 'aaaabbbbb', bar: 3})
+console.log(func('aaa'))
+console.log(func('bar', 1, 2, 3))
