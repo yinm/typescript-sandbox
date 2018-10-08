@@ -1,12 +1,5 @@
 "use strict";
-function rand() {
-    if (Math.random() < 0.5) {
-        return 'hello';
-    }
-    else {
-        return 123;
-    }
+function func(arg) {
+    return Number(arg);
 }
-var value = rand();
-var str = value;
-console.log(str * 10);
+var f = func;
