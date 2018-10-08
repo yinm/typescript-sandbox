@@ -1,9 +1,9 @@
 "use strict";
-var obj = {
-    foo: 3,
-    bar: 'hi'
-};
-var obj2 = {
-    foo: 'aaa',
-    bar: 5
-};
+var Foo = /** @class */ (function () {
+    function Foo(obj) {
+    }
+    return Foo;
+}());
+var obj1 = new Foo('foo');
+function func(obj) { console.log(obj); }
+func(3);

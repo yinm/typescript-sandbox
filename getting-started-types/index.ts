@@ -1,14 +1,7 @@
-interface Foo<S, T> {
-  foo: S
-  bar: T
+class Foo<T> {
+  constructor(obj: T) {}
 }
+const obj1 = new Foo<string>('foo')
 
-const obj: Foo<number, string> = {
-  foo: 3,
-  bar: 'hi'
-}
-
-const obj2: Foo<string, number> = {
-  foo: 'aaa',
-  bar: 5
-}
+function func<T>(obj: T): void { console.log(obj) }
+func<number>(3)
