@@ -1,10 +1,11 @@
 "use strict";
-var func = function (foo) {
-    var bar = [];
-    for (var _i = 1; _i < arguments.length; _i++) {
-        bar[_i - 1] = arguments[_i];
+var Foo = /** @class */ (function () {
+    function Foo() {
     }
-    return bar;
-};
-console.log(func('aaa'));
-console.log(func('bar', 1, 2, 3));
+    Foo.prototype.method = function () {
+        console.log('Hello world!');
+    };
+    return Foo;
+}());
+var obj = new Foo();
+console.log(obj);

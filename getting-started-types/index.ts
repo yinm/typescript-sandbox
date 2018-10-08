@@ -1,4 +1,8 @@
-const func = (foo: string, ...bar: number[]) => bar
+class Foo {
+  method(): void {
+    console.log('Hello world!')
+  }
+}
 
-console.log(func('aaa'))
-console.log(func('bar', 1, 2, 3))
+const obj: Foo = new Foo()
+console.log(obj)
