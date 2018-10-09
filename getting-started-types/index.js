@@ -1,8 +1,3 @@
 "use strict";
-var a = {
-    foo: 'foo',
-    bar: 'barbarbar'
-};
-var b = {
-    foo: 'foo',
-};
+var a = { foo: 'foo', bar: 3 };
+var b = a;
