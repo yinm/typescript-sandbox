@@ -1,5 +1,8 @@
 "use strict";
 var a = {
     foo: 'foo',
-    bar: 3
+    bar: 'barbarbar'
+};
+var b = {
+    foo: 'foo',
 };
