@@ -1,2 +1,3 @@
 "use strict";
-var b = { foo: 'foo', bar: 3 };
+function func(obj) { }
+func({ foo: 'foo', bar: 3 });
