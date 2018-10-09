@@ -1,3 +1,5 @@
 "use strict";
-var a = 'foo';
-a = 'bar';
+var a = {
+    foo: 'foo',
+    bar: 3
+};
