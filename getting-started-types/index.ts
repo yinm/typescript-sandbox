@@ -1,7 +1,5 @@
-interface MyObj {
-  foo: string
-}
+const foo: number[] = [0, 1, 2, 3]
+foo.push(4)
 
-function func(obj: MyObj): void {}
-
-func({ foo: 'foo', bar: 3 })
+const bar: Array<number> = [5, 6, 7]
+bar.unshift(8)
