@@ -1,2 +1,5 @@
-const f1: (foo: string) => void = () => {}
-const f2: (foo: string, bar: number) => void = f1
+const func = (foo: string, ...bar: number[]) => bar
+
+func('foo')
+func('bar', 1, 2, 3)
+func('bar', 'hey', 2, 3)
