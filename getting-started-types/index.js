@@ -1,3 +1,3 @@
 "use strict";
-var a = function () { };
-var b = a;
+var f1 = function () { };
+var f2 = f1;

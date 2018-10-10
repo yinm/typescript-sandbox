@@ -1,11 +1,2 @@
-interface MyObj {
-  foo: string
-  bar: number
-}
-
-interface MyObj2 {
-  foo: string
-}
-
-const a: (obj: MyObj2) => void = () => {}
-const b: (obj: MyObj) => void = a
+const f1: (foo: string) => void = () => {}
+const f2: (foo: string, bar: number) => void = f1
