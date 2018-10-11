@@ -8,3 +8,4 @@ var Foo = /** @class */ (function () {
     return Foo;
 }());
 var obj = new Foo();
+var obj2 = obj;
