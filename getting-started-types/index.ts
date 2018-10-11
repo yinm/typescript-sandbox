@@ -1,7 +1,7 @@
-function foo(): void {
-  console.log('hello')
+class Foo {
+  method(): void {
+    console.log('Hello, world')
+  }
 }
 
-function bar(): undefined {
-  console.log('world')
-}
+const obj: Foo = new Foo()

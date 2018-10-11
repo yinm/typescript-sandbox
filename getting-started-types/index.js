@@ -1,7 +1,10 @@
 "use strict";
-function foo() {
-    console.log('hello');
-}
-function bar() {
-    console.log('world');
-}
+var Foo = /** @class */ (function () {
+    function Foo() {
+    }
+    Foo.prototype.method = function () {
+        console.log('Hello, world');
+    };
+    return Foo;
+}());
+var obj = new Foo();
