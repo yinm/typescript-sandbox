@@ -1,3 +1,7 @@
 "use strict";
-var a = undefined;
-var b = a;
+function foo() {
+    console.log('hello');
+}
+function bar() {
+    console.log('world');
+}
