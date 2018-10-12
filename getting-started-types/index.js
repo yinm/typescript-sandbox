@@ -1,3 +1,6 @@
 "use strict";
-function func(obj) { }
-var f = func;
+function identity(value) {
+    return value;
+}
+var value = identity(3);
+var str = value;

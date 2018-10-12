@@ -1,2 +1,6 @@
-function func<T>(obj: T): void {}
-const f: <T>(obj: T) => void = func
+function identity<T>(value: T): T {
+  return value
+}
+
+const value = identity(3)
+const str: string = value
