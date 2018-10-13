@@ -1,6 +1,7 @@
-function identity<T>(value: T): T {
-  return value
-}
+const foo: [string, number] = ['foo', 3]
 
-const value = identity(3)
-const str: string = value
+const str: string = foo[0]
+
+function makePair(x: string, y: number): [string, number] {
+  return [x, y]
+}
