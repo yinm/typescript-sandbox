@@ -1,6 +1,4 @@
 "use strict";
-var foo = ['foo', 3];
-var str = foo[0];
-function makePair(x, y) {
-    return [x, y];
-}
+var a1 = [3, 'foo', 'bar'];
+var a2 = [5];
+var a3 = ['foo', 'bar'];
