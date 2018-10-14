@@ -1,4 +1,3 @@
-type T = [string, number?]
-
-const t1: T = ['foo']
-const t2: T = ['foo', 3]
+type Args = [string, number, boolean]
+const func = (...args: Args) => args[1]
+const v = func('foo', 3, true)
