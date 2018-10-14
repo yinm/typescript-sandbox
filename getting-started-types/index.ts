@@ -1,3 +1,5 @@
-const func = (...args: string[]) => args[0]
-const strings: string[] = ['foo', 'bar', 'baz']
-func(...strings)
+const func = (str: string, num: number, b: boolean) => args[0] + args[1]
+
+const args: [string, number, boolean] = ['foo', 3, false]
+
+func(...args)
