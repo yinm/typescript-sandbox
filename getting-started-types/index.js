@@ -1,15 +1,9 @@
 "use strict";
-function useHogePiyo(obj) {
-    if ('bar' in obj) {
-        console.log('Hoge', obj.bar);
+function func(value) {
+    if ('string' === typeof value) {
+        return value.length;
     }
     else {
-        console.log('Piyo', obj.baz);
+        return value;
     }
 }
-var obj = {
-    foo: 123,
-    bar: 'bar',
-    baz: true
-};
-useHogePiyo(obj);
