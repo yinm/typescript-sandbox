@@ -14,3 +14,10 @@ function useHogePiyo(obj: Hoge | Piyo): void {
     console.log('Piyo', obj.baz)
   }
 }
+
+const obj: Hoge | Piyo = {
+  foo: 123,
+  bar: 'bar',
+  baz: true
+}
+useHogePiyo(obj)

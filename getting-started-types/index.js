@@ -7,3 +7,9 @@ function useHogePiyo(obj) {
         console.log('Piyo', obj.baz);
     }
 }
+var obj = {
+    foo: 123,
+    bar: 'bar',
+    baz: true
+};
+useHogePiyo(obj);
