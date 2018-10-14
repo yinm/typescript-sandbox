@@ -2,15 +2,15 @@ interface Hoge {
   foo: string
   bar: number
 }
-
 interface Piyo {
   foo: number
   baz: boolean
 }
 
-type HogePiyo = Hoge | Piyo
-
-const obj: HogePiyo = {
-  foo: 'hello',
-  bar: 0
+function useHogePiyo(obj: Hoge | Piyo): void {
+  if ('bar' in obj) {
+    console.log('Hoge', obj.bar)
+  } else {
+    console.log('Piyo', obj.baz)
+  }
 }
