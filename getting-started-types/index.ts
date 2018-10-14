@@ -1,3 +1,6 @@
-type Args = [string, number, boolean]
-const func = (...args: Args) => args[1]
-const v = func('foo', 3, true)
+type Args = [string, ...number[]]
+
+const func = (f: string, ...args: Args) => args[0]
+
+const v1 = func('foo', 'bar')
+const v2 = func('foo', 'bar', 1, 2, 3)
