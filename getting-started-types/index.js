@@ -1,5 +1,6 @@
 "use strict";
-function func() {
-    throw new Error('Hi');
-}
-var result = func();
+var obj = {
+    foo: 'fooooo',
+    bar: 3,
+    baz: true
+};

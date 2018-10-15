@@ -1,5 +1,15 @@
-function func(): never {
-  throw new Error('Hi')
+interface Hoge {
+  foo: string
+  bar: number
 }
 
-const result: never = func()
+interface Piyo {
+  foo: string
+  baz: boolean
+}
+
+const obj: Hoge & Piyo = {
+  foo: 'fooooo',
+  bar: 3,
+  baz: true
+}
