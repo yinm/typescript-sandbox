@@ -7,7 +7,8 @@ let obj: MyObj = {
   foo: 'string'
 }
 
-obj = {
-  foo: 'foo',
-  bar: 100
+function func(obj: MyObj): number {
+  return obj.bar != null ? obj.bar * 100 : 0
 }
+
+console.log(func(obj))
