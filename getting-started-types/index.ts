@@ -1,8 +1,5 @@
-interface MyObj {
-  [key: string]: number
+interface Func {
+  (arg: number): void
 }
 
-const obj: MyObj = {}
-
-const num: number = obj.foo
-const num2: number = obj.bar
+const f: Func = (arg: number) => { console.log(arg) }
