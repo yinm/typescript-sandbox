@@ -2,8 +2,13 @@ interface MyObj {
   readonly foo: string
 }
 
-const obj: MyObj = {
-  foo: 'Hey!'
+interface MyObj2 {
+  foo: string
 }
 
-obj.foo = 'Hi'
+const obj: MyObj = { foo: 'Hey' }
+const obj2: MyObj2 = obj
+
+obj2.foo = 'Hi'
+
+console.log(obj.foo)
