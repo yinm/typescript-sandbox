@@ -1,5 +1,9 @@
-interface Func {
-  (arg: number): void
+interface Ctor<T> {
+  new(): T
 }
 
-const f: Func = (arg: number) => { console.log(arg) }
+class Foo {
+  public bar: number | undefined
+}
+
+const f: Ctor<Foo> = Foo
