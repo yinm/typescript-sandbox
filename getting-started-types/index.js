@@ -1,7 +1,12 @@
 "use strict";
-var Foo = /** @class */ (function () {
-    function Foo() {
+var value = rand();
+var str = value;
+console.log(str * 10);
+function rand() {
+    if (Math.random() < 0.5) {
+        return 'hello';
     }
-    return Foo;
-}());
-var f = Foo;
+    else {
+        return 123;
+    }
+}

@@ -1,9 +1,12 @@
-interface Ctor<T> {
-  new(): T
-}
+const value = rand()
 
-class Foo {
-  public bar: number | undefined
-}
+const str = value as number
+console.log(str * 10)
 
-const f: Ctor<Foo> = Foo
+function rand(): string | number {
+  if (Math.random() < 0.5) {
+    return 'hello'
+  } else {
+    return 123
+  }
+}
