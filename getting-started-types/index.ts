@@ -1,12 +1,8 @@
-const value = rand()
-
-const str = value as number
-console.log(str * 10)
-
-function rand(): string | number {
-  if (Math.random() < 0.5) {
-    return 'hello'
-  } else {
-    return 123
-  }
+interface Options {
+  foo?: string
+  bar?: number
 }
+
+const obj1 = { hoge: 3 }
+const obj2: Options = obj1
+const obj3: Options = 5

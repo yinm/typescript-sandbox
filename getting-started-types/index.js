@@ -1,12 +1,4 @@
 "use strict";
-var value = rand();
-var str = value;
-console.log(str * 10);
-function rand() {
-    if (Math.random() < 0.5) {
-        return 'hello';
-    }
-    else {
-        return 123;
-    }
-}
+var obj1 = { hoge: 3 };
+var obj2 = obj1;
+var obj3 = 5;
