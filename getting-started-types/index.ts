@@ -1,6 +1,5 @@
-const u: unknown = 3
+let foo = 'str'
 
-if (typeof u === 'number') {
-  const foo = u + 5
-  console.log(foo)
-}
+type FooType = typeof foo
+
+const str: FooType = 'abcdef'
