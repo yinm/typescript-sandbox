@@ -1,4 +1,4 @@
 "use strict";
-var obj1 = { hoge: 3 };
-var obj2 = obj1;
-var obj3 = 5;
+var u1 = 3;
+var u2 = null;
+var u3 = function (foo) { return true; };
