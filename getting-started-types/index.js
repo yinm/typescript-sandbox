@@ -1,4 +1,6 @@
 "use strict";
-var u1 = 3;
-var u2 = null;
-var u3 = function (foo) { return true; };
+var u = 3;
+if (typeof u === 'number') {
+    var foo = u + 5;
+    console.log(foo);
+}
