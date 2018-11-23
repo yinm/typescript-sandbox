@@ -1,19 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 class Base {
-    constructor(str) {
-        this.num = 1;
-        this.str = str;
-    }
-    hello() {
-        return `Hello, ${this.str}`;
-    }
-    get regExp() {
-        if (!this.regExpOptional) {
-            return new RegExp('test');
-        }
-        return this.regExpOptional;
+    greeting(name) {
+        return `Hi, ${name}`;
     }
 }
-const base = new Base('world');
-console.log(base.hello());
+class Inherit extends Base {
+    greeting(name) {
+        return `${super.greeting(name)}. How are you?`;
+    }
+}
+let obj = new Inherit();
+console.log(obj.greeting('TypeScript'));

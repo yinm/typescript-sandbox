@@ -1,26 +1,16 @@
 class Base {
-  num = 1
-  str: string
-  regExpOptional?: RegExp
-
-  constructor(str: string) {
-    this.str = str
-  }
-
-  hello(): string {
-    return `Hello, ${this.str}`
-  }
-
-  get regExp() {
-    if (!this.regExpOptional) {
-      return new RegExp('test')
-    }
-
-    return this.regExpOptional
+  greeting(name: string) {
+    return `Hi, ${name}`
   }
 }
 
-const base = new Base('world')
-console.log(base.hello())
+class Inherit extends Base {
+  greeting(name: string) {
+    return `${super.greeting(name)}. How are you?`
+  }
+}
 
-export {}
+let obj = new Inherit()
+console.log(obj.greeting('TypeScript'))
+
+export { }
