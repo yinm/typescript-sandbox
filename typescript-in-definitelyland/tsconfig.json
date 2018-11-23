@@ -19,10 +19,6 @@
     "noFallthroughCasesInSwitch": true,
 
     /* Module Resolution Options */
-    "moduleResolution": "node",
-    "types": [
-      "node"
-    ],
 
     /* Experimental Options */
     "experimentalDecorators": true,
