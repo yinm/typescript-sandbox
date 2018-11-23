@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+// 2nd
 function asyncModoki(callback) {
     callback('TypeScript');
 }

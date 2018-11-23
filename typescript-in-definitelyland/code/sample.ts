@@ -1,3 +1,4 @@
+// 2nd
 function asyncModoki(callback: (value: string) => void) {
   callback('TypeScript')
 }
