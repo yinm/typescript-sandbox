@@ -1,23 +1,19 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-let objA = {};
-let s1 = objA[1];
-exports.s1 = s1;
-// let s2 = objA['test']
-let objB = {};
-let s3 = objB[1];
-exports.s3 = s3;
-let s4 = objB['test'];
-exports.s4 = s4;
-objA = {
-    0: 'str',
+let obj;
+obj = {
+    hello(word) {
+        return `Hello, ${word}`;
+    }
 };
-let tmp = {
-    0: 'str',
-    str: 'str'
+obj = {
+    hello: (word) => `Hello, ${word}`
 };
-objA = tmp;
-objB = {
-    0: 'str',
-    str: 'str',
+obj = {
+    hello: function (word) {
+        return `Hello, ${word}`;
+    }
 };
+let obj2;
+obj2 = obj;
+obj = obj2;

@@ -1,32 +1,27 @@
-let objA: {
-  [index: number]: string;
-} = {}
-
-let s1 = objA[1]
-// let s2 = objA['test']
-
-let objB: {
-  [index: string]: string
-} = {}
-
-let s3 = objB[1]
-let s4 = objB['test']
-
-objA = {
-  0: 'str',
-  // str: 'str'
+let obj: {
+  hello(word: string): string;
 }
 
-let tmp = {
-  0: 'str',
-  str: 'str'
-}
-objA = tmp
-
-objB = {
-  0: 'str',
-  str: 'str',
-  // num: 1
+obj = {
+  hello(word: string) {
+    return `Hello, ${word}`
+  }
 }
 
-export { s1, s3, s4 }
+obj = {
+  hello: (word: string) => `Hello, ${word}`
+}
+
+obj = {
+  hello: function(word: string) {
+    return `Hello, ${word}`
+  }
+}
+
+let obj2: {
+  hello: (word: string) => string
+}
+obj2 = obj
+obj = obj2
+
+export { }
