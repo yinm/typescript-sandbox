@@ -1,13 +1,24 @@
-class BaseA {
-  constructor(public str: string) {
+abstract class Animal {
+  abstract name: string
+  abstract get poo(): string
+
+  abstract speak(): string
+  sleep(): string {
+    return 'zzzZZZ...'
   }
 }
 
-class BaseB {
-  str: string
-  constructor(str: string) {
-    this.str = str
+// new Animal()
+
+class Cat extends Animal {
+  name = 'Cat'
+  poo = 'poo....'
+
+  speak(): string {
+    return 'meow'
   }
 }
 
-export { BaseA, BaseB }
+new Cat()
+
+export { }

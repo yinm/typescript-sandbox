@@ -1,14 +1,19 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-class BaseA {
-    constructor(str) {
-        this.str = str;
+class Animal {
+    sleep() {
+        return 'zzzZZZ...';
     }
 }
-exports.BaseA = BaseA;
-class BaseB {
-    constructor(str) {
-        this.str = str;
+// new Animal()
+class Cat extends Animal {
+    constructor() {
+        super(...arguments);
+        this.name = 'Cat';
+        this.poo = 'poo....';
+    }
+    speak() {
+        return 'meow';
     }
 }
-exports.BaseB = BaseB;
+new Cat();
