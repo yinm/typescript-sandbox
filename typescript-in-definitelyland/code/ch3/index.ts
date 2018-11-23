@@ -1,27 +1,28 @@
-let obj: {
-  hello(word: string): string;
+let obj: { name: string; } = {
+  name: 'TypeScript'
 }
+console.log(obj)
 
 obj = {
-  hello(word: string) {
-    return `Hello, ${word}`
-  }
+  name: 'JavaScript',
+  // version: '2016'
 }
 
-obj = {
-  hello: (word: string) => `Hello, ${word}`
+let tmp = {
+  name: 'JavaScript',
+  version: '2016'
 }
+obj = tmp
 
-obj = {
-  hello: function(word: string) {
-    return `Hello, ${word}`
-  }
+interface FooOptions {
+  fileName?: string;
+  checkBar?: boolean;
 }
+declare function foo(opts: FooOptions): void
 
-let obj2: {
-  hello: (word: string) => string
-}
-obj2 = obj
-obj = obj2
+foo({
+  fileName: 'vvakame.txt',
+  checkBar: true
+})
 
 export { }
