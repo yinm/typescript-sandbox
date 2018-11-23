@@ -1,18 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-let obj = {
-    name: 'TypeScript'
+let objA = {
+    str: 'TypeScript'
 };
-console.log(obj);
-obj = {
-    name: 'JavaScript',
+// objA.str = 'JavaScript'
+let objB = {
+    str: 'Mutable'
 };
-let tmp = {
-    name: 'JavaScript',
-    version: '2016'
-};
-obj = tmp;
-foo({
-    fileName: 'vvakame.txt',
-    checkBar: true
-});
+objA = objB;
+console.log(objA.str);
+objB.str = 'Modified!';
+console.log(objA.str);

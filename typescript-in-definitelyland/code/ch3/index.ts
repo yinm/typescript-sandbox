@@ -1,10 +1,18 @@
-interface FooOptions {
-  fileName?: string;
-  checkBar?: boolean;
+interface Foo {
+  readonly str: string
 }
 
-let obj = {
-  unknownOption: 1
+let objA: Foo = {
+  str: 'TypeScript'
 }
+// objA.str = 'JavaScript'
 
-let fooOpts: FooOptions = obj
+let objB = {
+  str: 'Mutable'
+}
+objA = objB
+console.log(objA.str)
+objB.str = 'Modified!'
+console.log(objA.str)
+
+export { }
