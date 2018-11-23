@@ -1,15 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-let obj;
-obj = (word) => {
-    if (typeof word === 'string') {
-        return `Hello, ${word}`;
-    }
-    else {
-        return 42;
-    }
+let clazz;
+class Sample {
+}
+clazz = Sample;
+let obj = new clazz();
+console.log(obj);
+clazz = class {
 };
-let str = obj('TypeScript');
-console.log(str);
-let num = obj();
-console.log(num);
+obj = new clazz();
