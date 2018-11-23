@@ -1,21 +1,9 @@
 "use strict";
-function printPoint(p) {
-    let message = `x=${p.x}, y=${p.y}`;
-    if (p.color) {
-        message = `${p.color}(${message})`;
-    }
-    console.log(message);
-}
-printPoint({
-    x: 1,
-    y: 2
-});
-printPoint({
-    x: 1,
-    y: 2,
-    color: 'red'
-});
-printPoint({
-    x: 1,
-    y: 2,
-});
+Object.defineProperty(exports, "__esModule", { value: true });
+let obj = 1;
+let num = obj;
+console.log(num);
+let str = 'string';
+num = str;
+num = str;
+console.log(num);
