@@ -1,28 +1,10 @@
-let obj: { name: string; } = {
-  name: 'TypeScript'
-}
-console.log(obj)
-
-obj = {
-  name: 'JavaScript',
-  // version: '2016'
-}
-
-let tmp = {
-  name: 'JavaScript',
-  version: '2016'
-}
-obj = tmp
-
 interface FooOptions {
   fileName?: string;
   checkBar?: boolean;
 }
-declare function foo(opts: FooOptions): void
 
-foo({
-  fileName: 'vvakame.txt',
-  checkBar: true
-})
+let obj = {
+  unknownOption: 1
+}
 
-export { }
+let fooOpts: FooOptions = obj
