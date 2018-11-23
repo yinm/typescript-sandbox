@@ -1,29 +1,30 @@
 interface Point {
   x: number;
   y: number;
+  color?: string;
 }
 
-class PointImpl1 implements Point {
-  constructor(
-    public x: number,
-    public y: number
-  ) {}
-}
-
-class PointImpl2 {
-  constructor(
-    public x: number,
-    public y: number
-  ) {}
-}
-
-function double(p: Point): Point {
-  return {
-    x: p.x * 2,
-    y: p.y * 2,
+function printPoint(p: Point): void {
+  let message = `x=${p.x}, y=${p.y}`
+  if (p.color) {
+    message = `${p.color}(${message})`
   }
+  console.log(message)
 }
 
-double(new PointImpl1(1, 2))
-double(new PointImpl2(3, 4))
-double({x: 5, y: 6})
+printPoint({
+  x: 1,
+  y: 2
+})
+
+printPoint({
+  x: 1,
+  y: 2,
+  color: 'red'
+})
+
+printPoint({
+  x: 1,
+  y: 2,
+  // color: 3
+})
