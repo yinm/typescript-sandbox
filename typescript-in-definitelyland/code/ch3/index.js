@@ -1,7 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 let obj;
-obj = {
-    property: 'Hi!'
+obj = word => `Hello, ${word}`;
+obj = (word) => {
+    return `Hello, ${word}`;
 };
-console.log(obj);
+obj = function (word) {
+    return `Hello, ${word}`;
+};
+let str = obj('TypeScript');
+console.log(str);

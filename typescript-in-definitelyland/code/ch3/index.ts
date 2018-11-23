@@ -1,11 +1,16 @@
 let obj: {
-  property: string;
+  (word: string): string
 }
 
-obj = {
-  property: 'Hi!'
+obj = word => `Hello, ${word}`
+obj = (word: string): string => {
+  return `Hello, ${word}`
+}
+obj = function(word: string): string {
+  return `Hello, ${word}`
 }
 
-console.log(obj)
+let str = obj('TypeScript')
+console.log(str)
 
 export { }
