@@ -1,11 +1,27 @@
-let obj: any = 1
+class Base {
+  constructor(public str: string) {}
+}
 
-let num = obj as number
-console.log(num)
+class InheritA extends Base {
+  constructor(public num: number) {
+    super('TypeScript')
+  }
+}
 
-let str = 'string'
-num = str as any
-num = <any>str
-console.log(num)
+class InheritB extends Base {
+  constructor(public bool: boolean) {
+    super('TypeScript')
+  }
+}
+
+let obj: Base = new InheritA(1)
+
+if (obj instanceof InheritA) {
+  obj.num
+} else if (obj instanceof InheritB) {
+  obj.bool
+} else {
+  obj.str
+}
 
 export { }
