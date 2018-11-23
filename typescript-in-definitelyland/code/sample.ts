@@ -1,10 +1,25 @@
-// 3rd
-function asyncModoki(callback: (value: string) => void) {
-  callback('TypeScript')
+function returnByPromise(word: string) {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve(word)
+    }, 100)
+  })
 }
 
-asyncModoki(value => console.log(`Hello, ${value}`))
-asyncModoki((value: string): void => console.log(`Hello, ${value}`))
-asyncModoki(function(value: string): void { console.log(`Hello, ${value}`) })
+async function helloAsync(): Promise<string> {
+  console.log('A')
+  const word = await returnByPromise('TypeScript')
+  console.log(word)
+  console.log('B')
+
+  return `Hello, ${word}`
+}
+
+(async () => {
+  const hello = await helloAsync()
+  console.log(hello)
+})()
+
+helloAsync().then(hello => console.log(hello))
 
 export { }
