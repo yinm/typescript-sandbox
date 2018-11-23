@@ -1,21 +1,6 @@
-function hello(word: string): string {
-  return `Hello, ${word}`
+function hello(...args: string[]) {
+  return `Hello, ${args.join(' & ')}`
 }
-hello('TypeScript')
-
-function bye(word: string) {
-  return `Bye, ${word}`
-}
-bye('TypeScript')
-
-function hey(word?: string) {
-  return `Hey, ${word || 'TypeScript'}`
-}
-hey()
-
-function ahoy(word = 'TypeScript') {
-  return `Ahoy! ${word}`
-}
-ahoy()
+console.log(hello('TS', 'JS'))
 
 export {}
