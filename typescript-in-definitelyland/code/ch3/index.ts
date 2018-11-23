@@ -1,29 +1,29 @@
-class SampleA<T> {
-  constructor(public data: T) {}
-}
-let objA = new SampleA<string>('str')
-
-interface SampleB<T> {
-  data: T;
-}
-let objB: SampleB<number> = { data: 1 }
-
-let obj: {
-  new <T>(value: T): any;
-  <T>(value: T): any;
-  methodA<T>(value: T): any;
-  methodB<T, U>(value: T): U;
+class Base {
+  constructor(public str: string) {}
 }
 
-let func: <T>(array: T[]) => T
-func = <T>(array: T[]) => array[0]
-func<number>([1, 2, 3])
+class InheritA extends Base {
+  constructor(public num: number) {
+    super('TypeScript')
+  }
+}
 
-let ctor: new <T>(value: T) => any
-ctor = SampleA
-new ctor<string>('str')
+interface Sample<T extends Base> {
+  method(): T
+}
 
-type SampleC<T> = { data: T }
-let objC: SampleC<number> = { data: 1 }
+let objA: Sample<InheritA>
 
-export { SampleA, objA, SampleB, objB, obj, SampleC, objC }
+// let objB: Sample<RegExp>
+
+let objC: Sample<{ str: string }>
+
+interface Service<T> {
+  service(t: T): T;
+}
+
+function f<T extends Service<T>>(x: T) {
+  return x.service(x)
+}
+
+export { Base, InheritA, Sample, objA, objC, Service, f }

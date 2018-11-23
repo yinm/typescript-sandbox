@@ -1,22 +1,24 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-class SampleA {
-    constructor(data) {
-        this.data = data;
+class Base {
+    constructor(str) {
+        this.str = str;
     }
 }
-exports.SampleA = SampleA;
-let objA = new SampleA('str');
+exports.Base = Base;
+class InheritA extends Base {
+    constructor(num) {
+        super('TypeScript');
+        this.num = num;
+    }
+}
+exports.InheritA = InheritA;
+let objA;
 exports.objA = objA;
-let objB = { data: 1 };
-exports.objB = objB;
-let obj;
-exports.obj = obj;
-let func;
-func = (array) => array[0];
-func([1, 2, 3]);
-let ctor;
-ctor = SampleA;
-new ctor('str');
-let objC = { data: 1 };
+// let objB: Sample<RegExp>
+let objC;
 exports.objC = objC;
+function f(x) {
+    return x.service(x);
+}
+exports.f = f;
