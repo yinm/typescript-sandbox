@@ -1,27 +1,13 @@
-class Base {
-  a = 'a'
-  public b = 'b'
-  protected c = 'c'
-  private d = 'd'
-
-  method() {
-    this.d
+class BaseA {
+  constructor(public str: string) {
   }
 }
 
-class Inherit extends Base {
-  method() {
-    this.a
-    this.b
-    this.c
-
-    // this.d
+class BaseB {
+  str: string
+  constructor(str: string) {
+    this.str = str
   }
 }
 
-const base = new Base()
-base.a
-base.b
-
-// base.c
-// base.d
+export { BaseA, BaseB }
