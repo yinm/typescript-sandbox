@@ -1,16 +1,27 @@
 class Base {
-  greeting(name: string) {
-    return `Hi, ${name}`
+  a = 'a'
+  public b = 'b'
+  protected c = 'c'
+  private d = 'd'
+
+  method() {
+    this.d
   }
 }
 
 class Inherit extends Base {
-  greeting(name: string) {
-    return `${super.greeting(name)}. How are you?`
+  method() {
+    this.a
+    this.b
+    this.c
+
+    // this.d
   }
 }
 
-let obj = new Inherit()
-console.log(obj.greeting('TypeScript'))
+const base = new Base()
+base.a
+base.b
 
-export { }
+// base.c
+// base.d
