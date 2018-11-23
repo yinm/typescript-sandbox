@@ -1,11 +1,29 @@
-class Foo {
-  str = 'string'
-  num = 1
+interface Point {
+  x: number;
+  y: number;
 }
 
-let obj: Foo = {
-  str: 'Hi!',
-  num: 42
+class PointImpl1 implements Point {
+  constructor(
+    public x: number,
+    public y: number
+  ) {}
 }
 
-export { Foo, obj }
+class PointImpl2 {
+  constructor(
+    public x: number,
+    public y: number
+  ) {}
+}
+
+function double(p: Point): Point {
+  return {
+    x: p.x * 2,
+    y: p.y * 2,
+  }
+}
+
+double(new PointImpl1(1, 2))
+double(new PointImpl2(3, 4))
+double({x: 5, y: 6})

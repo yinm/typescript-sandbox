@@ -1,14 +1,22 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-class Foo {
-    constructor() {
-        this.str = 'string';
-        this.num = 1;
+class PointImpl1 {
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
     }
 }
-exports.Foo = Foo;
-let obj = {
-    str: 'Hi!',
-    num: 42
-};
-exports.obj = obj;
+class PointImpl2 {
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+    }
+}
+function double(p) {
+    return {
+        x: p.x * 2,
+        y: p.y * 2,
+    };
+}
+double(new PointImpl1(1, 2));
+double(new PointImpl2(3, 4));
+double({ x: 5, y: 6 });
