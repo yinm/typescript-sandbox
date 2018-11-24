@@ -1,10 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-function upperAll(words) {
-    if (typeof words === 'string') {
-        words = [words];
-    }
-    return words.map(word => word.toUpperCase());
+let foo = {
+    value: 'TypeScript'
+};
+// foo.value.toUpperCase()
+if (typeof foo.value === 'string') {
+    foo.value.toUpperCase();
 }
-console.log(upperAll('TypeScript'));
-console.log(upperAll(['TypeScript', 'JavaScript']));

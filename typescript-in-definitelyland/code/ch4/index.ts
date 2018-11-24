@@ -1,12 +1,15 @@
-function upperAll(words: string | string[]) {
-  if (typeof words === 'string') {
-    words = [words]
-  }
-
-  return words.map(word => word.toUpperCase())
+interface Foo {
+  value: number | string;
 }
 
-console.log(upperAll('TypeScript'))
-console.log(upperAll(['TypeScript', 'JavaScript']))
+let foo: Foo = {
+  value: 'TypeScript'
+}
+
+// foo.value.toUpperCase()
+
+if (typeof foo.value === 'string') {
+  foo.value.toUpperCase()
+}
 
 export { }
