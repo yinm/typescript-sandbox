@@ -1,18 +1,8 @@
-let objA: Date
-let objB: Date | null | undefined
+import { readFile } from 'fs'
 
-objA = new Date()
-console.log(objA)
-objA = null
+let objA = {}
 
-// objA = null as any
+let objB = {}
+export { objB }
 
-objB = new Date()
-objB = null
-objB = void 0
-
-// objB.getTime()
-
-objB!.getTime()
-
-export { }
+export let objC = {}
