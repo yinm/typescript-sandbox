@@ -1,21 +1,16 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-let obj = null;
-typeof obj === 'string' && obj.charAt(0);
-// typeof obj === 'number' && obj.charAt(0)
-if (typeof obj === 'string' || typeof obj === 'boolean') {
-    // string | boolean
+function mixinStorage(base) {
+    let modified = base;
+    modified.$save = () => {
+        console.log(`データを保存しました！${JSON.stringify(base)}`);
+    };
+    return modified;
 }
-else {
-    // number
-}
-typeof obj === 'string' ? obj.charAt(0) : obj;
-if (typeof obj === 'string') {
-    obj.charAt(0);
-}
-else {
-    obj;
-}
-if (!(typeof obj !== 'string')) {
-    obj.charAt(0);
-}
+let base = {
+    name: 'TypeScript'
+};
+let obj = mixinStorage(base);
+obj.$save();
+obj.name = 'JavaScript';
+obj.$save();

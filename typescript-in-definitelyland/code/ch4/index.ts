@@ -1,24 +1,23 @@
-let obj: number | boolean | string = null as any
-
-typeof obj === 'string' && obj.charAt(0)
-// typeof obj === 'number' && obj.charAt(0)
-
-if (typeof obj === 'string' || typeof obj === 'boolean') {
-  // string | boolean
-} else {
-  // number
+interface Storage {
+  $save(): void;
 }
 
-typeof obj === 'string' ? obj.charAt(0) : obj
+function mixinStorage<T>(base: T): T & Storage {
+  let modified = base as any
+  modified.$save = () => {
+    console.log(`データを保存しました！${JSON.stringify(base)}`)
+  }
 
-if (typeof obj === 'string') {
-  obj.charAt(0)
-} else {
-  obj
+  return modified
 }
 
-if (!(typeof obj !== 'string')) {
-  obj.charAt(0)
+let base = {
+  name: 'TypeScript'
 }
+let obj = mixinStorage(base)
+
+obj.$save()
+obj.name = 'JavaScript'
+obj.$save()
 
 export {}
