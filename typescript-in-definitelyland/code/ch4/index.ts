@@ -1,45 +1,32 @@
-import * as fs from 'fs'
+type Constructor<T> = new (...args: any[]) => T
 
-interface Config {
-  filePath?: string | null
-  verbose?: boolean
-}
-
-let config: Config = {}
-config.filePath = 'settings.json'
-config.verbose = false
-processA(config)
-function processA(config: Config = {}) {
-  if (fs.existsSync(config.filePath!)) {
-    console.log(fs.readFileSync(config.filePath!, 'utf8'))
+function Tagged<T extends Constructor<object>>(Base: T) {
+  return class extends Base {
+    tag = ''
+    constructor(...args: any[]) {
+      super(...args)
+    }
   }
 }
 
-function processB(config: Config = {}) {
-  config.filePath = config.filePath || 'settings.json'
-  config.verbose = config.verbose || false
-
-  if (fs.existsSync(config.filePath)) {
-    console.log(fs.readFileSync(config.filePath, 'utf8'))
-  }
-
-  processA(config)
+class Score {
+  constructor(public point: number) {}
 }
 
-interface ConfigFixed {
-  filePath: string;
-  verbose: boolean;
-}
+const TaggedScore = Tagged(Score)
 
-function processC(config: Config = {}) {
-  const fixed: ConfigFixed = {
-    filePath: config.filePath || 'settings.json',
-    verbose: config.verbose || false,
-  }
+const ts = new TaggedScore(1)
+ts.tag = 'vv'
+console.log(ts.tag, ts.point)
 
-  if (fs.existsSync(fixed.filePath)) {
-    console.log(fs.readFileSync(fixed.filePath, 'utf8'))
+// new TaggedScore('s')
+
+class RankingScore extends TaggedScore {
+  constructor(public rank: number, tag: string, point: number) {
+    super(point)
+    this.tag = tag
   }
 }
 
-export { Config, processB, processC }
+const rs = new RankingScore(1, 'vv', 100)
+console.log(rs.rank, rs.tag, rs.point)
