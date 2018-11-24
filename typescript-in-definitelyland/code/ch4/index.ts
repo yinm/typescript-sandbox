@@ -1,10 +1,5 @@
-let a: string | boolean | undefined
-a = 'str'
-a = true
-a = 1
+let or = 'str' || true
+let cond = true ? 1 : 'str'
+let array = [1, true, 'str']
 
-let b1: string | boolean | undefined
-let b2: boolean | number | undefined
-let c: typeof b1 | typeof b2
-
-export { a, c }
+export { or, cond, array }
