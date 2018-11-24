@@ -1,36 +1,19 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-class A {
+class Sample {
     constructor(str) {
         this.str = str;
     }
 }
-class B {
-    constructor(num) {
-        this.num = num;
+let obj = {
+    str: 'Hi!'
+};
+function isSample(s) {
+    if (!s) {
+        return false;
     }
+    return typeof s.str === 'string';
 }
-class C extends A {
-    constructor(bool) {
-        super('TS');
-        this.bool = bool;
-    }
-}
-let obj = null;
-if (obj instanceof A) {
-    obj.str;
-    if (obj instanceof C) {
-        obj.bool;
-    }
-}
-if (obj instanceof C) {
-    obj.bool;
-}
-else {
-    if (obj instanceof B) {
-        obj.num;
-    }
-    else {
-        obj.str;
-    }
+if (isSample(obj)) {
+    console.log(obj.str);
 }
