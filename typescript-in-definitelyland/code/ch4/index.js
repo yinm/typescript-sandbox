@@ -1,16 +1,18 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-function mixinStorage(base) {
-    let modified = base;
-    modified.$save = () => {
-        console.log(`データを保存しました！${JSON.stringify(base)}`);
-    };
-    return modified;
-}
-let base = {
-    name: 'TypeScript'
-};
-let obj = mixinStorage(base);
-obj.$save();
-obj.name = 'JavaScript';
-obj.$save();
+var sample1;
+(function (sample1) {
+    let $obj = angular.resource1.$resource.create();
+    $obj.str = 'test';
+    let obj = $obj.$insert();
+    console.log(obj.str);
+})(sample1 || (sample1 = {}));
+exports.sample1 = sample1;
+var sample2;
+(function (sample2) {
+    let $obj = angular.resource2.$resource.create();
+    $obj.str = 'test';
+    let obj = $obj.$insert();
+    console.log(obj.str);
+})(sample2 || (sample2 = {}));
+exports.sample2 = sample2;
