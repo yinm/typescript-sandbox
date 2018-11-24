@@ -1,39 +1,18 @@
-class A {
-  _this: this
-
-  a(): this {
-    return this
-  }
-
-  d(arg: this): this {
-    return arg
-  }
-
-  e() {
-    return this
-  }
+function testA(this: string) {
+  console.log(this.toUpperCase())
 }
 
-class B extends A {
-  b() {
-    console.log('B')
-  }
+testA.bind('TypeScript')()
+// testA()
+// testA('TS')
+
+function testB() {
+  // console.log(this.toUpperCase())
 }
 
-interface C extends A {
-  c(): void
+function testC(this: string, postfix: string) {
+  console.log(`${this.toUpperCase()}${postfix}`)
 }
+testC.bind('TypeScript')('!')
 
-new B().a().e().b()
-
-new B().d(new B()).b()
-
-// new B().d(new A()).b()
-
-
-new B()._this.b()
-
-let c: C = null as any
-c.a().c()
-
-export {}
+export { testB }
