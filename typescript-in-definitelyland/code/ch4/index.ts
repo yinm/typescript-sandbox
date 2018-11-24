@@ -1,19 +1,9 @@
 class Sample {
-  constructor(public str: string) {}
+  hello = (word = 'TypeScrippt') => `Hello, ${word}`
+  bye: typeof Sample.prototype.hello
 }
 
-let obj: Sample
-let clazz: typeof Sample
+let obj = new Sample()
+obj.bye = obj.hello
 
-obj = new Sample('TS')
-clazz = Sample
-
-obj = new clazz('TS')
-
-let alterClazz: {
-  new (str: string): { str: string }
-}
-alterClazz = clazz
-clazz = alterClazz
-
-export { obj }
+export { }
