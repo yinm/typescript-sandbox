@@ -1,19 +1,31 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-class Sample {
-    constructor(str) {
-        this.str = str;
+class Node {
+    isStringNode() {
+        return this instanceof StringNode;
+    }
+    isNumberNode() {
+        return this instanceof NumberNode;
     }
 }
-let obj = {
-    str: 'Hi!'
-};
-function isSample(s) {
-    if (!s) {
-        return false;
+class StringNode extends Node {
+    constructor(text) {
+        super();
+        this.text = text;
     }
-    return typeof s.str === 'string';
 }
-if (isSample(obj)) {
-    console.log(obj.str);
+class NumberNode extends Node {
+    constructor(value) {
+        super();
+        this.value = value;
+    }
 }
+let nodes = [new StringNode('TypeScript'), new NumberNode(8)];
+nodes.forEach(n => {
+    if (n.isStringNode()) {
+        console.log(n.text);
+    }
+    else if (n.isNumberNode()) {
+        console.log(n.value);
+    }
+});

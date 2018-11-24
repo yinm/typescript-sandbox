@@ -1,21 +1,31 @@
-class Sample {
-  constructor(public str: string) {}
-}
-
-let obj: Sample = {
-  str: 'Hi!'
-}
-
-function isSample(s: Sample): s is Sample {
-  if (!s) {
-    return false
+abstract class Node {
+  isStringNode(): this is StringNode {
+    return this instanceof StringNode
   }
-
-  return typeof s.str === 'string'
+  isNumberNode(): this is NumberNode {
+    return this instanceof NumberNode
+  }
 }
 
-if (isSample(obj)) {
-  console.log(obj.str)
+class StringNode extends Node {
+  constructor(public text: string) {
+    super()
+  }
 }
+
+class NumberNode extends Node {
+  constructor(public value: number) {
+    super()
+  }
+}
+
+let nodes: Node[] = [new StringNode('TypeScript'), new NumberNode(8)]
+nodes.forEach(n => {
+  if (n.isStringNode()) {
+    console.log(n.text)
+  } else if (n.isNumberNode()) {
+    console.log(n.value)
+  }
+})
 
 export {}
