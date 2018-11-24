@@ -1,7 +1,14 @@
-export function foo(a: string, b: number, _c: boolean) {
-  console.log(a)
+function a(v: number) {
+  if (v < 0) {
+    return 'negative'
+  } else if (0 < v) {
+    return 'positive'
+  }
+
 }
 
-export class Sample {
-  method(a: string) {}
+function b() {
+
 }
+
+export { a, b }
