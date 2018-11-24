@@ -1,7 +1,9 @@
-let obj: number | string = null as any
+let objA: any
+if (typeof objA === 'string') {
+  objA.toFixed(0)
+}
 
-if (typeof obj === 'string') {
-  obj.charAt(0)
-} else {
-  obj.toFixed(2)
+let objB: number = 1
+if (typeof objB === 'string') {
+  objB.toFixed(0)
 }
