@@ -1,17 +1,21 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const obj1 = {
-    name: 'maya',
-    greeting() {
-        console.log(`Hello ${this.name}`);
-        // console.log(`Hello, ${this.notExist}`)
+{
+    let obj = 1;
+    console.log(obj);
+}
+{
+    let obj = 1;
+    console.log(obj);
+}
+// let obj: Data
+{
+    class Foo {
     }
-};
-console.log(obj1.greeting());
-const obj = {
-    hello() {
-        console.log(`Hello, ${this.name}`);
-        // console.log(`Hello, ${this.notExist}`)
-    }
-};
-obj.hello();
+    let Bar;
+    (function (Bar) {
+        Bar[Bar["a"] = 0] = "a";
+        Bar[Bar["b"] = 1] = "b";
+    })(Bar || (Bar = {}));
+    console.log(Foo, Bar.a, null);
+}
