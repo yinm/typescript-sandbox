@@ -1,9 +1,16 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-class Foo {
-    method() {
-        let obj = 1;
-        console.log(obj);
+class Sample {
+    constructor(str) {
+        this.str = str;
     }
 }
-exports.Foo = Foo;
+let obj;
+exports.obj = obj;
+let clazz;
+exports.obj = obj = new Sample('TS');
+clazz = Sample;
+exports.obj = obj = new clazz('TS');
+let alterClazz;
+alterClazz = clazz;
+clazz = alterClazz;
