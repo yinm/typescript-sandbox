@@ -1,8 +1,7 @@
-import { readFile } from 'fs'
+export function foo(a: string, b: number, _c: boolean) {
+  console.log(a)
+}
 
-let objA = {}
-
-let objB = {}
-export { objB }
-
-export let objC = {}
+export class Sample {
+  method(a: string) {}
+}
