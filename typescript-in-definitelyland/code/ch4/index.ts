@@ -1,5 +1,8 @@
-let or = 'str' || true
-let cond = true ? 1 : 'str'
-let array = [1, true, 'str']
+let func: () => string
 
-export { or, cond, array }
+let b: (() => string) | (() => boolean)
+let c: { (): string } | { (): boolean }
+
+let d: (() => string)
+
+export { func, b, c, d }

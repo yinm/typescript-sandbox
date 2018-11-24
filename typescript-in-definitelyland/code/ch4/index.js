@@ -1,8 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-let or = 'str' || true;
-exports.or = or;
-let cond = true ? 1 : 'str';
-exports.cond = cond;
-let array = [1, true, 'str'];
-exports.array = array;
+let func;
+exports.func = func;
+let b;
+exports.b = b;
+let c;
+exports.c = c;
+let d;
+exports.d = d;
