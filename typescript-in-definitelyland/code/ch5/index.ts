@@ -1,10 +1,18 @@
-declare class Sample {
-  method();
-}
+let objA: Date
+let objB: Date | null | undefined
 
-function hi(word) {
-  word = word || 'TypeScript'
-  console.log(`Hello, ${word}`)
-}
+objA = new Date()
+console.log(objA)
+objA = null
+
+// objA = null as any
+
+objB = new Date()
+objB = null
+objB = void 0
+
+// objB.getTime()
+
+objB!.getTime()
 
 export { }
