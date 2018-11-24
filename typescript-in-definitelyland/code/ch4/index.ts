@@ -1,20 +1,12 @@
-function upperA(word?: string) {
-  // word.toUpperCase()
-
-  if (word == null) {
-    word = 'TypeScript'
+function upperAll(words: string | string[]) {
+  if (typeof words === 'string') {
+    words = [words]
   }
 
-  console.log(word.toUpperCase())
+  return words.map(word => word.toUpperCase())
 }
 
-function upperB(word?: string) {
-  word = word || 'TypeScript'
-  console.log(word.toUpperCase())
-}
+console.log(upperAll('TypeScript'))
+console.log(upperAll(['TypeScript', 'JavaScript']))
 
-function upperC(word = 'TypeScript') {
-  console.log(word.toUpperCase())
-}
-
-export { upperA, upperB, upperC }
+export { }
