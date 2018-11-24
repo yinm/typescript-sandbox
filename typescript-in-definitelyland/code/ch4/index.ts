@@ -1,9 +1,32 @@
-let objA: any
-if (typeof objA === 'string') {
-  objA.toFixed(0)
+class A {
+  constructor(public str: string) {}
+}
+class B {
+  constructor(public num: number) {}
+}
+class C extends A{
+  constructor(public bool: boolean) {
+    super('TS')
+  }
 }
 
-let objB: number = 1
-if (typeof objB === 'string') {
-  objB.toFixed(0)
+let obj: A | B | C = null as any
+if (obj instanceof A) {
+  obj.str
+
+  if (obj instanceof C) {
+    obj.bool
+  }
 }
+
+if (obj instanceof C) {
+  obj.bool
+} else {
+  if (obj instanceof B) {
+    obj.num
+  } else {
+    obj.str
+  }
+}
+
+export { }
