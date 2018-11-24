@@ -1,14 +1,10 @@
-function a(v: number) {
-  if (v < 0) {
-    return 'negative'
-  } else if (0 < v) {
-    return 'positive'
-  }
+function testA(this: string) {
+  console.log(this.toUpperCase())
+}
+testA.bind('TypeScript')()
 
+function testB() {
+  console.log(this.toUpperCase())
 }
 
-function b() {
-
-}
-
-export { a, b }
+export { testB }
