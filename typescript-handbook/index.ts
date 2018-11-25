@@ -1,4 +1,4 @@
-function loggingIdentity<T>(arg: T[]): T[] {
+function loggingIdentity<T>(arg: Array<T>): Array<T> {
   console.log(arg.length)
   return arg
 }
