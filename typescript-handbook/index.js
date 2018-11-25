@@ -1,8 +1,9 @@
-var GenericNumber = /** @class */ (function () {
-    function GenericNumber() {
+var GenericType = /** @class */ (function () {
+    function GenericType() {
     }
-    return GenericNumber;
+    return GenericType;
 }());
-var myGenericNumber = new GenericNumber();
-myGenericNumber.zeroValue = 0;
-myGenericNumber.add = function (x, y) { return x + y; };
+var myGenericString = new GenericType();
+myGenericString.zeroValue = '';
+myGenericString.add = function (x, y) { return x + y; };
+console.log(myGenericString.add(myGenericString.zeroValue, 'test'));
