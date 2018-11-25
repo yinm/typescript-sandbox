@@ -1,11 +1,8 @@
-interface Lengthwise {
-  length: number;
+function getProperty<T, K extends keyof T>(obj: T, key: K) {
+  return obj[key]
 }
 
-function loggingIdentity<T extends Lengthwise>(arg: T): T {
-  console.log(arg.length)
-  return arg
-}
+let x = { a: 1, b: 2, c: 3, d: 4 }
 
-// loggingIdentity(3)
-loggingIdentity({ length: 10, value: 3 })
+getProperty(x, 'a')
+// getProperty(x, 'm')
