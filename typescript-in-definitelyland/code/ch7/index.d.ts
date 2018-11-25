@@ -1,7 +1,3 @@
-interface Foo {
-  hello(): string;
-}
-
-interface Foo {
-  bye(): string;
+interface String {
+  trimStart(): string;
 }

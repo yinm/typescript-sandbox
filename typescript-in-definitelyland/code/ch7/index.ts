@@ -1,7 +1,5 @@
 /// <reference path="./index.d.ts" />
-let foo: Foo = null as any
 
-foo.hello()
-foo.bye()
+let str = 'TypeScript '
 
-export { }
+console.log(str.trimStart())
