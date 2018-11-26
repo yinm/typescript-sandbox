@@ -1,8 +1,12 @@
-declare function assert(value: any): void
-
+declare function assert(value: any, message?: string): void
 declare namespace assert {
-  function ok(value: any): void
-}
+  export function deepEqual(actual: any, expected: any): void
+  export function notDeepEqual(actual: any, expected: any): void
 
-assert(foo === 'foo')
-assert.ok(value)
+  export interface Options {
+    assertion?: any;
+    output?: any;
+  }
+
+  export function customize(options: Options): typeof assert
+}
