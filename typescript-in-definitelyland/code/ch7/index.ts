@@ -1,5 +1,3 @@
-function hello(word = 'TS') {
-  console.log(`Hello, ${word}`)
-}
+import * as b from './foo'
 
-module.exports = hello
+b.num

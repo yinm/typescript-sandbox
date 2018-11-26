@@ -1,13 +1,9 @@
-const foo = {
-  str: 'aa',
-  num: 1
-}
+declare module 'bar' {
+  interface Bar {
+    num: number;
+  }
 
-declare module 'foo' {
-  let str: string
-}
-
-declare module 'foo' {
-  let num: number
+  let _: Bar
+  export = _
 }
 
