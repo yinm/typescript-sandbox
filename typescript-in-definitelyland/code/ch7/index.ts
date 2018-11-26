@@ -1,10 +1,9 @@
-declare function hello(word: string): string
-declare function hello(callback: () => string): string
+declare function funcA(word: string): string
+declare function funcA(num: number): string
 
-hello('TS')
-hello(() => 'function')
+let obj: string | number = null as any
 
-declare function bye(word: string | { (): string }): string
+// funcA(obj)
 
-bye('JS')
-bye(() => 'function')
+declare function funcB(word: string | number): string
+funcB(obj)

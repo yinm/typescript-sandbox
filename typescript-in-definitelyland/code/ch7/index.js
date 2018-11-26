@@ -1,5 +1,3 @@
 "use strict";
-hello('TS');
-hello(() => 'function');
-bye('JS');
-bye(() => 'function');
+let obj = null;
+funcB(obj);
