@@ -1,35 +1,37 @@
-interface JQuery {
-  addClass(className: string): JQuery;
-  html(htmlString: string): JQuery;
-  val(): any;
-  empty(): JQuery;
-  append(content1: JQuery, ...content2: any[]): JQuery;
-  appendTo(target: JQuery): JQuery;
+declare namespace jquery {
+  interface Element {
+    addClass(className: string): Element;
+    html(htmlString: string): Element;
+    val(): any;
+    empty(): Element;
+    append(content1: Element, ...content2: any[]): Element;
+    appendTo(target: Element): Element;
+  }
+
+  interface Static {
+    ajax(settings: AjaxSettings): any;
+    (selector: string, context?: Element): Element;
+    (element: Element): Element;
+  }
+
+  interface AjaxSettings {
+    data?: any;
+    type?: string;
+    url?: string;
+  }
+
+  interface Promise<T> {
+    state(): string;
+    then<U>(
+      fullfill: (value: T) => U,
+      reject?: (...reasons: any[]) => U
+    ): Promise<U>
+  }
+
+  interface Deferred<T> extends Promise<T> {
+    reject(...args: any[]): Deferred<T>;
+    resolve(value?: T, ...args: any[]): Deferred<T>;
+  }
 }
 
-interface JQueryStatic {
-  ajax(settings: JQueryAjaxSettings): any;
-  (selector: string, context?: Element): JQuery;
-  (element: Element): JQuery;
-}
-
-interface JQueryAjaxSettings {
-  data?: any;
-  type?: string;
-  url?: string;
-}
-
-interface JQueryPromise<T> {
-  state(): string;
-  then<U>(
-    fullfill: (value: T) => U,
-    reject?: (...reasons: any[]) => U
-  ): JQueryPromise<U>;
-}
-
-interface JQueryDeferred<T> extends JQueryPromise<T> {
-  reject(...args: any[]): JQueryDeferred<T>;
-  resolve(value?: T, ...args: any[]): JQueryDeferred<T>;
-}
-
-declare var $: JQueryStatic
+declare var $: jquery.Static
