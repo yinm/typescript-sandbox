@@ -1,4 +1,6 @@
 "use strict";
-/// <reference path="./index.d.ts" />
-let str = 'TypeScript ';
-console.log(str.trimStart());
+Object.defineProperty(exports, "__esModule", { value: true });
+let test;
+exports.test = test;
+exports.test = test = { str: 'aaa' };
+test.str;

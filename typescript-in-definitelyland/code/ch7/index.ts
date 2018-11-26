@@ -1,5 +1,13 @@
-/// <reference path="./index.d.ts" />
+declare namespace ghost {
+  interface Test {
+    str: string;
+  }
+}
 
-let str = 'TypeScript '
+let test: ghost.Test
+test = { str: 'aaa' }
+test.str
 
-console.log(str.trimStart())
+// let notExists = ghost
+
+export { test }
