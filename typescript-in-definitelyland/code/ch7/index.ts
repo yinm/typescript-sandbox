@@ -1,3 +1,7 @@
-declare namespace foo.bar.buzz {
-  let str: string;
+declare var assert: {
+  (value: any): void
+  ok(value: any): void
 }
+
+assert(foo === 'foo')
+assert.ok(value)
