@@ -1,9 +1,6 @@
-declare function funcA(word: string): string
-declare function funcA(num: number): string
+import * as foo from 'foo'
 
-let obj: string | number = null as any
+foo.str
+foo.num
 
-// funcA(obj)
-
-declare function funcB(word: string | number): string
-funcB(obj)
+export { foo }
