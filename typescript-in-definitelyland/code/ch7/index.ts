@@ -1,8 +1,7 @@
-declare var assert: Assert
+declare function assert(value: any): void
 
-interface Assert {
-  (value: any): void;
-  ok(value: any): void;
+declare namespace assert {
+  function ok(value: any): void
 }
 
 assert(foo === 'foo')
