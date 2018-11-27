@@ -1,2 +1,3 @@
-declare function test(): string
-let t = test()
+interface Window {
+  fetch(url: string|Request, init?: RequestInit): Promise<Response>
+}
