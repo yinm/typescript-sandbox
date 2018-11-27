@@ -1,7 +1,3 @@
-namespace X {
-  type X = string;
-}
-
-namespace X {
-  type Y = string;
+namespace N {
+  let x = 1;
 }
