@@ -1,4 +1,1 @@
-declare namespace $ {
-  function x(): void
-  var y: string
-}
+declare function f(): void
