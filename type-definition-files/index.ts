@@ -1,3 +1,2 @@
-namespace N {
-  let x = 1;
-}
+export {}
+var x = 1

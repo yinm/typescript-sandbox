@@ -1,5 +1,3 @@
 "use strict";
-var N;
-(function (N) {
-    let x = 1;
-})(N || (N = {}));
+Object.defineProperty(exports, "__esModule", { value: true });
+var x = 1;
