@@ -1,26 +1,11 @@
-class BeeKeeper {
-  hasMask: boolean
+import {StringValidator} from "./Validation"
+import {numberRegexp} from "./ZipCodeValidator"
+
+class ZipCodeValidator implements StringValidator {
+  isAcceptable(s: string) {
+    return s.length === 5 && numberRegexp
+  }
 }
 
-class ZooKeeper {
-  nametag: string
-}
-
-class Animal {
-  numLegs: number
-}
-
-class Bee extends Animal {
-  keeper: BeeKeeper
-}
-
-class Lion extends Animal {
-  keeper: ZooKeeper
-}
-
-function createInstance<A extends Animal>(c: new () => A): A {
-  return new c()
-}
-
-createInstance(Lion).keeper.nametag
-createInstance(Bee).keeper.hasMask
+export { ZipCodeValidator }
+export { ZipCodeValidator as mainValidator }
