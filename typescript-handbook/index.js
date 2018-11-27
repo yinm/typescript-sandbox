@@ -1,5 +1,4 @@
-function identity(arg) {
+function loggingIdentity(arg) {
+    console.log(arg.length);
     return arg;
 }
-var output = identity('myString');
-var output2 = identity('myString');

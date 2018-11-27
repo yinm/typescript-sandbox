@@ -1,6 +1,4 @@
-function identity<T>(arg: T): T {
+function loggingIdentity<T>(arg: T[]): T[] {
+  console.log(arg.length)
   return arg
 }
-
-let output = identity<string>('myString')
-let output2 = identity('myString')
