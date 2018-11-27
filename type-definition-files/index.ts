@@ -1,1 +1,1 @@
-declare function f(): void
+import * as _ from 'lodash'
