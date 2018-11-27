@@ -1,9 +1,8 @@
-interface GenericIdentityFn<T> {
-  (arg: T): T;
+class GenericNumber<T> {
+  zeroValue: T
+  add: (x: T, y: T) => T
 }
 
-function identity<T>(arg: T): T {
-  return arg
-}
-
-let myIdentity: GenericIdentityFn<number> = identity
+let myGenericNumber = new GenericNumber<number>()
+myGenericNumber.zeroValue = 0
+myGenericNumber.add = function(x, y) { return x + y }
