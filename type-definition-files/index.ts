@@ -1,3 +1,2 @@
-declare function test(): any
-
-test()
+declare function test(): string
+let t = test()

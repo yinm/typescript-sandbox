@@ -1,2 +1,2 @@
 "use strict";
-test();
+let t = test();
