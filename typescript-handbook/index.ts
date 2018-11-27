@@ -1,10 +1,8 @@
-class GenericNumber<T> {
-  zeroValue: T
-  add: (x: T, y: T) => T
+interface Lengthwise {
+  length: number;
 }
 
-let stringNumeric = new GenericNumber<string>()
-stringNumeric.zeroValue = ''
-stringNumeric.add = function(x, y) { return x + y }
-
-console.log(stringNumeric.add(stringNumeric.zeroValue, 'test'))
+function loggingIdentity<T extends Lengthwise>(arg: T): T {
+  console.log(arg.length)
+  return arg
+}
