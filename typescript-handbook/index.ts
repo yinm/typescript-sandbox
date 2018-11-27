@@ -1,8 +1,6 @@
-function getProperty<T, K extends keyof T>(obj: T, key: K) {
-  return obj[key]
+function identity<T>(arg: T): T {
+  return arg
 }
 
-let x = { a: 1, b: 2, c: 3, d: 4 }
-
-getProperty(x, 'a')
-// getProperty(x, 'm')
+let output = identity<string>('myString')
+let output2 = identity('myString')
