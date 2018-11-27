@@ -1,3 +1,4 @@
-interface Window {
-  fetch(url: string|Request, init?: RequestInit): Promise<Response>
+declare namespace $ {
+  function x(): void
+  var y: string
 }
