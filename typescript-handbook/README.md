@@ -1,1 +1,2 @@
-ref: [TypeScript Handbook を読む (6. Generics) - Qiita](https://qiita.com/murank/items/144b686d34fd433a97a3)
+ref: [TypeScript Handbook を読む (1. Basic Types) - Qiita](https://qiita.com/murank/items/9c1f633545842c953947)[TypeScript Handbook を読む (1. Basic Types) - Qiita](https://qiita.com/murank/items/9c1f633545842c953947)
+
