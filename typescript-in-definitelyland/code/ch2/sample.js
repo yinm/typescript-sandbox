@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-function hello(...args) {
-    return `Hello ${args.join(' & ')}`;
+function asyncModoki(callback) {
+    callback('TypeScript');
 }
-console.log(hello('TS', 'JS'));
+asyncModoki(value => console.log(`Hello, ${value}`));
+asyncModoki((value) => console.log(`Hello, ${value}`));
