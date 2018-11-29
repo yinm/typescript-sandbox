@@ -1,26 +1,28 @@
-// 2nd
-function returnByPromise(word: string) {
-  return new Promise(resolve => {
-    setTimeout(() => {
-      resolve(word)
-    }, 100)
-  })
+class Base {
+  num = 1
+
+  str: string
+
+  regExpOptional?: RegExp
+
+  constructor(str: string) {
+    this.str = str
+  }
+
+  hello(): string {
+    return `Hello, ${this.str}`
+  }
+
+  get regExp() {
+    if (!this.regExpOptional) {
+      return new RegExp('test')
+    }
+
+    return this.regExpOptional
+  }
 }
 
-async function helloAsync(): Promise<string> {
-  console.log('A')
-  const word = await returnByPromise('TypeScript')
-  console.log(word)
-  console.log('B')
-
-  return `Hello, ${word}`
-}
-
-(async () => {
-  const hello = await helloAsync()
-  console.log(hello)
-})()
-
-helloAsync().then(hello => console.log(hello))
+const base = new Base('world')
+console.log(base.hello())
 
 export { }
