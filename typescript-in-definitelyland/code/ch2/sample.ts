@@ -1,3 +1,4 @@
+// 2nd
 function returnByPromise(word: string) {
   return new Promise(resolve => {
     setTimeout(() => {
