@@ -1,25 +1,14 @@
 "use strict";
-class Base {
-    constructor() {
-        this.a = 'a';
-        this.b = 'b';
-        this.c = 'c';
-        this.d = 'd';
-    }
-    method() {
-        this.d;
+Object.defineProperty(exports, "__esModule", { value: true });
+class BaseA {
+    constructor(str) {
+        this.str = str;
     }
 }
-class Inherit extends Base {
-    method() {
-        this.a;
-        this.b;
-        this.c;
-        // this.d
+exports.BaseA = BaseA;
+class BaseB {
+    constructor(str) {
+        this.str = str;
     }
 }
-const base = new Base();
-base.a;
-base.b;
-// base.c
-// base.d
+exports.BaseB = BaseB;
