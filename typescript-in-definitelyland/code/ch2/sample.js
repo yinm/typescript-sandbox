@@ -1,21 +1,18 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-class Animal {
-    static sleep() {
-        return 'zzzZZZ...';
-    }
-    claim() {
-        return this.name;
-    }
+function hello(word) {
+    return `Hello, ${word}`;
 }
-class Cat extends Animal {
-    constructor() {
-        super(...arguments);
-        this.name = 'Cat';
-        this.poo = 'poo....';
-    }
-    speak() {
-        return 'meow';
-    }
+hello('TypeScript');
+function bye(word) {
+    return `Bye, ${word}`;
 }
-new Cat();
+bye('TypeScript');
+function hey(word) {
+    return `Hey, ${word || 'TypeScript'}`;
+}
+hey();
+function ahoy(word = 'TypeScript') {
+    return `Ahoy! ${word}`;
+}
+ahoy();

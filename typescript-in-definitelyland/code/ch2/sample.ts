@@ -1,25 +1,21 @@
-abstract class Animal {
-  abstract name: string
-  abstract get poo(): string
-
-  abstract speak(): string
-  static sleep(): string {
-    return 'zzzZZZ...'
-  }
-  claim(): string {
-    return this.name
-  }
+function hello(word: string): string {
+  return `Hello, ${word}`
 }
+hello('TypeScript')
 
-class Cat extends Animal {
-  name = 'Cat'
-  poo = 'poo....'
-
-  speak(): string {
-    return 'meow'
-  }
+function bye(word: string) {
+  return `Bye, ${word}`
 }
+bye('TypeScript')
 
-new Cat()
+function hey(word?: string) {
+  return `Hey, ${word || 'TypeScript'}`
+}
+hey()
+
+function ahoy(word = 'TypeScript') {
+  return `Ahoy! ${word}`
+}
+ahoy()
 
 export { }
