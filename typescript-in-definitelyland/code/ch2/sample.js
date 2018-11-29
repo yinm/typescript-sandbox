@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-// 2nd
+// 3rd
 function returnByPromise(word) {
     return new Promise(resolve => {
         setTimeout(() => {
