@@ -1,14 +1,25 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 class Base {
-    greeting(name) {
-        return `Hi! ${name}`;
+    constructor() {
+        this.a = 'a';
+        this.b = 'b';
+        this.c = 'c';
+        this.d = 'd';
+    }
+    method() {
+        this.d;
     }
 }
 class Inherit extends Base {
-    greeting(name) {
-        return `${super.greeting(name)}. How are you?`;
+    method() {
+        this.a;
+        this.b;
+        this.c;
+        // this.d
     }
 }
-let obj = new Inherit();
-console.log(obj.greeting('TypeScript'));
+const base = new Base();
+base.a;
+base.b;
+// base.c
+// base.d
