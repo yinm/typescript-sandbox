@@ -1,16 +1,28 @@
-let obj = {
-  str: 'string',
-  num: 1,
+let obj: {
+  hello(word: string): string
 }
 
-let str: string = obj['str']
-let num: number = obj['num']
-// let any = obj['notExists']
+obj = {
+  hello(word: string) {
+    return `Hello, ${word}`
+  }
+}
 
-let propertyName1 = 'str'
-// let str2 = obj[propertyName1]
+obj = {
+  hello: (word: string) => `Hello, ${word}`
+}
 
-const propertyName2 = 'str'
-let str3 = obj[propertyName2]
+obj = {
+  hello: function(word: string) {
+    return `Hello, ${word}`
+  }
+}
 
-export { str, num, propertyName1, propertyName2, str3 }
+let obj2: {
+  hello: (word: string) => string
+}
+
+obj2 = obj
+obj = obj2
+
+export { }
