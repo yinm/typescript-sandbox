@@ -1,16 +1,18 @@
 let obj: {
   (word: string): string
+  (): number
 }
 
-obj = word => `Hello, ${word}`
-obj = (word: string): string => {
-  return `Hello, ${word}`
-}
-obj = function(word: string): string {
-  return `Hello, ${word}`
+obj = (word?: string): any => {
+  if (typeof word === 'string') {
+    return `Hello ${word}`
+  } else {
+    return 42
+  }
 }
 
 let str = obj('TypeScript')
 console.log(str)
 
-export { }
+let num = obj()
+console.log(num)

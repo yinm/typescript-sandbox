@@ -1,12 +1,14 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 let obj;
-obj = word => `Hello, ${word}`;
 obj = (word) => {
-    return `Hello, ${word}`;
-};
-obj = function (word) {
-    return `Hello, ${word}`;
+    if (typeof word === 'string') {
+        return `Hello ${word}`;
+    }
+    else {
+        return 42;
+    }
 };
 let str = obj('TypeScript');
 console.log(str);
+let num = obj();
+console.log(num);
