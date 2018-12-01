@@ -1,12 +1,20 @@
 "use strict";
-// 2nd
-let func;
-func = word => `Hello, ${word}`;
-func = (word) => {
-    return `Hello, ${word}`;
+class AImpl {
+    constructor(str) {
+        this.str = str;
+    }
+}
+let objA = new AImpl('string');
+let objB = {
+    str: 'string',
+    num: 42
 };
-func = function (word) {
-    return `Hello, ${word}`;
+class FooClass {
+    constructor(num) {
+        this.num = num;
+    }
+}
+let objC = {
+    num: 42,
+    str: 'string'
 };
-func = () => 'Hello, TypeScript';
-func = (v1, v2 = 'JavaScript') => `Hello, ${v1} & ${v2}`;
