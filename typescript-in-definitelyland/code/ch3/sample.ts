@@ -1,33 +1,16 @@
-let objA: {
-  [index: number]: string
-} = {}
-
-let s1 = objA[1]
-
-// const s2 = objA['test']
-
-let objB: {
-  [index: string]: string
-} = {}
-
-let s3 = objB[1]
-let s4 = objB['test']
-
-objA = {
-  0: 'str',
-  // str: 'str'
+let obj = {
+  str: 'string',
+  num: 1,
 }
 
-let tmp = {
-  0: 'str',
-  str: 'str'
-}
-objA = tmp
+let str: string = obj['str']
+let num: number = obj['num']
+// let any = obj['notExists']
 
-objB = {
-  0: 'str',
-  str: 'str',
-  // num: 1
-}
+let propertyName1 = 'str'
+// let str2 = obj[propertyName1]
 
-export { s1, s3, s4 }
+const propertyName2 = 'str'
+let str3 = obj[propertyName2]
+
+export { str, num, propertyName1, propertyName2, str3 }

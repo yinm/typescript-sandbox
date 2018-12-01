@@ -1,23 +1,18 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-let objA = {};
-let s1 = objA[1];
-exports.s1 = s1;
-// const s2 = objA['test']
-let objB = {};
-let s3 = objB[1];
-exports.s3 = s3;
-let s4 = objB['test'];
-exports.s4 = s4;
-objA = {
-    0: 'str',
+let obj = {
+    str: 'string',
+    num: 1,
 };
-let tmp = {
-    0: 'str',
-    str: 'str'
-};
-objA = tmp;
-objB = {
-    0: 'str',
-    str: 'str',
-};
+let str = obj['str'];
+exports.str = str;
+let num = obj['num'];
+exports.num = num;
+// let any = obj['notExists']
+let propertyName1 = 'str';
+exports.propertyName1 = propertyName1;
+// let str2 = obj[propertyName1]
+const propertyName2 = 'str';
+exports.propertyName2 = propertyName2;
+let str3 = obj[propertyName2];
+exports.str3 = str3;
