@@ -1,19 +1,18 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-let obj;
-obj = {
-    hello(word) {
-        return `Hello, ${word}`;
-    }
+let obj = {
+    name: 'TypeScript'
 };
-obj = {
-    hello: (word) => `Hello, ${word}`
+exports.obj = obj;
+exports.obj = obj = {
+    name: 'JavaScript',
 };
-obj = {
-    hello: function (word) {
-        return `Hello, ${word}`;
-    }
+let tmp = {
+    name: 'JavaScript',
+    version: '2016'
 };
-let obj2;
-obj2 = obj;
-obj = obj2;
+exports.obj = obj = tmp;
+foo({
+    fileName: 'vvakame.txt',
+    checkBar: true
+});
