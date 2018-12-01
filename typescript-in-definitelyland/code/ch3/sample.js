@@ -1,4 +1,5 @@
 "use strict";
+// 2nd
 let func;
 func = word => `Hello, ${word}`;
 func = (word) => {

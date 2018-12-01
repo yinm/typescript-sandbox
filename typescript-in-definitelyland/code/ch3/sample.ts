@@ -1,3 +1,4 @@
+// 2nd
 let func: (value: string) => string
 
 func = word => `Hello, ${word}`
