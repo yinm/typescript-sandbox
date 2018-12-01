@@ -1,18 +1,12 @@
-let obj: {
-  (word: string): string
-  (): number
+let clazz: {
+  new(): any
 }
 
-obj = (word?: string): any => {
-  if (typeof word === 'string') {
-    return `Hello ${word}`
-  } else {
-    return 42
-  }
-}
+class Sample {}
+clazz = Sample
+let obj = new clazz()
 
-let str = obj('TypeScript')
-console.log(str)
+clazz = class { }
+obj = new clazz()
 
-let num = obj()
-console.log(num)
+export { obj }
