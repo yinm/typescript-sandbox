@@ -1,13 +1,13 @@
-class Foo {
-  readonly str: string
+let func: (value: string) => string
 
-  constructor() {
-    this.str = 'TypeScript'
-  }
-
-  modify() {
-    // this.str = 'JS'
-  }
+func = word => `Hello, ${word}`
+func = (word: string) => {
+  return `Hello, ${word}`
+}
+func = function(word: string) {
+  return `Hello, ${word}`
 }
 
-export { Foo }
+func = () => 'Hello, TypeScript'
+
+func = (v1: string, v2 = 'JavaScript') => `Hello, ${v1} & ${v2}`

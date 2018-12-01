@@ -1,11 +1,11 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-class Foo {
-    constructor() {
-        this.str = 'TypeScript';
-    }
-    modify() {
-        // this.str = 'JS'
-    }
-}
-exports.Foo = Foo;
+let func;
+func = word => `Hello, ${word}`;
+func = (word) => {
+    return `Hello, ${word}`;
+};
+func = function (word) {
+    return `Hello, ${word}`;
+};
+func = () => 'Hello, TypeScript';
+func = (v1, v2 = 'JavaScript') => `Hello, ${v1} & ${v2}`;
