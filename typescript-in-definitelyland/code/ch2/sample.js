@@ -1,22 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-// 3rd
-function returnByPromise(word) {
-    return new Promise(resolve => {
-        setTimeout(() => {
-            resolve(word);
-        }, 100);
-    });
+function asyncModoki(callback) {
+    callback('TypeScript');
 }
-async function helloAsync() {
-    console.log('A');
-    const word = await returnByPromise('TypeScript');
-    console.log(word);
-    console.log('B');
-    return `Hello, ${word}`;
-}
-(async () => {
-    const hello = await helloAsync();
-    console.log(hello);
-})();
-helloAsync().then(hello => console.log(hello));
+asyncModoki((value => console.log(`Hello, ${value}`)));
+asyncModoki((value) => console.log(`Hello, ${value}`));
