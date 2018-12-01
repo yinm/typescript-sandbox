@@ -1,37 +1,18 @@
 namespace a {
-  class Sample {
-    hello(word = 'TypeScript') {
-      return `Hello, ${word}`
-    }
-  }
-
-  export interface Hello {
-    hello(word?: string): string
-  }
-  export let obj: Hello = new Sample()
-}
-
-namespace a {
-  export function bye(word = 'TypeScript') {
-    return `Bye, ${word}`
-  }
-
-  // let tmp = new Sample()
+  export class Sample { }
 }
 
 namespace b {
-  export namespace c {
-    export function hello() {
-      return a.obj.hello()
-    }
-  }
-}
+  let objA: a.Sample
+  objA = new a.Sample()
 
-namespace d.e {
-  export function hello() {
-    return a.obj.hello()
-  }
-}
+  import Sample = a.Sample
+  let objB: Sample
+  objB = new Sample()
 
-console.log(b.c.hello())
-console.log(d.e.hello())
+  import Test = a.Sample
+  let objC: Test
+  objC = new Test()
+
+  objA = new Test()
+}
