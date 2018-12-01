@@ -1,5 +1,6 @@
+// 2nd
 export function hello(word = 'TypeScript') {
-  return `Hello, ${word}`
+  return `Hello ,${word}`
 }
 
 export default function(word = 'default') {

@@ -1,7 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+// 2nd
 function hello(word = 'TypeScript') {
-    return `Hello, ${word}`;
+    return `Hello ,${word}`;
 }
 exports.hello = hello;
 function default_1(word = 'default') {
