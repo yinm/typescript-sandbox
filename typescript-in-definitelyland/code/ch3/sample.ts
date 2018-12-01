@@ -1,12 +1,33 @@
-let clazz: {
-  new(): any
+let objA: {
+  [index: number]: string
+} = {}
+
+let s1 = objA[1]
+
+// const s2 = objA['test']
+
+let objB: {
+  [index: string]: string
+} = {}
+
+let s3 = objB[1]
+let s4 = objB['test']
+
+objA = {
+  0: 'str',
+  // str: 'str'
 }
 
-class Sample {}
-clazz = Sample
-let obj = new clazz()
+let tmp = {
+  0: 'str',
+  str: 'str'
+}
+objA = tmp
 
-clazz = class { }
-obj = new clazz()
+objB = {
+  0: 'str',
+  str: 'str',
+  // num: 1
+}
 
-export { obj }
+export { s1, s3, s4 }
