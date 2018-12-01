@@ -1,5 +1,5 @@
 "use strict";
-// 2nd
+// 3rd
 async function main() {
     const sub = await Promise.resolve().then(() => require('./sub'));
     console.log(sub.hello());

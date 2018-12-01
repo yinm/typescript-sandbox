@@ -1,4 +1,4 @@
-// 2nd
+// 3rd
 async function main() {
   const sub = await import('./sub')
   console.log(sub.hello())
