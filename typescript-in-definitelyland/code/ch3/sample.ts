@@ -1,19 +1,13 @@
-interface Foo {
+class Foo {
   readonly str: string
+
+  constructor() {
+    this.str = 'TypeScript'
+  }
+
+  modify() {
+    // this.str = 'JS'
+  }
 }
 
-let objA: Foo = {
-  str: 'TypeScript'
-}
-// objA.str = 'JavaScript'
-
-let objB = {
-  str: 'Mutable'
-}
-objA = objB
-console.log(objA.str)
-
-objB.str = 'Modified'
-console.log(objA.str)
-
-export { }
+export { Foo }
