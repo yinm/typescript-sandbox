@@ -1,20 +1,14 @@
 "use strict";
-class AImpl {
-    constructor(str) {
-        this.str = str;
+Object.defineProperty(exports, "__esModule", { value: true });
+class Foo {
+    constructor() {
+        this.str = 'string';
+        this.num = 1;
     }
 }
-let objA = new AImpl('string');
-let objB = {
-    str: 'string',
+exports.Foo = Foo;
+let obj = {
+    str: 'Hi!',
     num: 42
 };
-class FooClass {
-    constructor(num) {
-        this.num = num;
-    }
-}
-let objC = {
-    num: 42,
-    str: 'string'
-};
+exports.obj = obj;
