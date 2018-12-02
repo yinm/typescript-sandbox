@@ -1,24 +1,10 @@
-interface Point {
-  x: number
-  y: number
-  color?: string
-}
+let obj: any = 1
 
-function printPoint(p: Point): void {
-  let message = `x=${p.x}, y=${p.y}`
-  if (p.color) {
-    message = `${p.color}(${message})`
-  }
-  console.log(message)
-}
+let num = obj as number
 
-printPoint({
-  x: 1,
-  y: 2
-})
+let str = 'string'
+num = str as any
 
-printPoint({
-  x: 1,
-  y: 2,
-  color: 'red',
-})
+num = <any>str
+
+export { num }
