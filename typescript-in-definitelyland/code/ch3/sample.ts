@@ -1,9 +1,29 @@
-let strArray: Array<string> = ['a', 'b', 'c']
-let numArray: Array<number> = [1, 2, 3]
+class SampleA<T> {
+  constructor(public data: T) {}
+}
+let objA = new SampleA<string>('str')
 
-strArray.forEach(v => v.charAt(0))
-numArray.forEach(v => v.toFixed(2))
+interface SampleB<T> {
+  data: T
+}
+let objB: SampleB<number> = { data: 1 }
 
-strArray.forEach((v: string) => v.charAt(0))
-numArray.forEach((v: number) => v.toFixed(0))
-// strArray.forEach((v: RegExp) => v.test('str'))
+let obj: {
+  new <T>(value: T): any
+  <T>(value: T): any
+  methodA<T>(value: T): any
+  methodB<T, U>(value: T): U
+}
+
+let func: <T>(array: T[]) => T
+func = <T>(array: T[]) => array[0]
+func<number>([1, 2, 3])
+
+let ctor: new <T>(value: T) => any
+ctor = SampleA
+new ctor<string>('str')
+
+type SampleC<T> = { data: T }
+let objC: SampleC<number> = { data: 1 }
+
+export { SampleA, objA, SampleB, objB, obj, SampleC, objC }
