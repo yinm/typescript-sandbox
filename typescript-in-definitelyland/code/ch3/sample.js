@@ -1,8 +1,29 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-let obj = 1;
-let num = obj;
-exports.num = num;
-let str = 'string';
-exports.num = num = str;
-exports.num = num = str;
+class Base {
+    constructor(str) {
+        this.str = str;
+    }
+}
+class InheritA extends Base {
+    constructor(num) {
+        super('TS');
+        this.num = num;
+    }
+}
+class InheritB extends Base {
+    constructor(bool) {
+        super('TS');
+        this.bool = bool;
+    }
+}
+let obj = new InheritA(1);
+if (obj instanceof InheritA) {
+    obj.num;
+}
+else if (obj instanceof InheritB) {
+    obj.bool;
+}
+else {
+    obj.str;
+}

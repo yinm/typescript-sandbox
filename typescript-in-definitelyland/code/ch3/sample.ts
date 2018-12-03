@@ -1,10 +1,29 @@
-let obj: any = 1
+class Base {
+  constructor(public str: string) {}
+}
 
-let num = obj as number
+class InheritA extends Base {
+  constructor(public num: number) {
+    super('TS')
+  }
+}
 
-let str = 'string'
-num = str as any
+class InheritB extends Base {
+  constructor(public bool: boolean) {
+    super('TS')
+  }
+}
 
-num = <any>str
+let obj: Base = new InheritA(1)
 
-export { num }
+// (obj as InheritA).num
+
+if (obj instanceof InheritA) {
+  obj.num
+} else if (obj instanceof InheritB) {
+  obj.bool
+} else {
+  obj.str
+}
+
+export { }
