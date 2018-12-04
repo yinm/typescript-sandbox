@@ -1,14 +1,13 @@
-class DataContainer<T = string> {
-  data?: T
-
-  print() {
-    console.log(this.data)
-  }
+let str = 'TypeScript'
+if (typeof str === 'number') {
+  str.toUpperCase()
 }
 
-const obj1 = new DataContainer()
-obj1.data = ''
-// obj1.data = 1
+function test(): never {
+  throw new Error()
+}
 
-const obj2 = new DataContainer<number>()
-obj2.data = 1
+let obj: never = test()
+obj.test()
+
+export { }
