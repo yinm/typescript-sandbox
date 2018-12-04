@@ -1,3 +1,4 @@
+// 2nd
 class SampleA<T> {
   constructor(public data: T) {}
 }

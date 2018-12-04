@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+// 2nd
 class SampleA {
     constructor(data) {
         this.data = data;
