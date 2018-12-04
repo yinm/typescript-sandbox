@@ -1,26 +1,14 @@
-class Base {
-  constructor(public str: string) {}
-}
-class InheritA extends Base {
-  constructor(public num: number) {
-    super('TS')
+class DataContainer<T = string> {
+  data?: T
+
+  print() {
+    console.log(this.data)
   }
 }
 
-interface Sample<T extends Base> {
-  method(): T
-}
+const obj1 = new DataContainer()
+obj1.data = ''
+// obj1.data = 1
 
-let objA: Sample<InheritA>
-// let objB: Sample<RegExp>
-let objC: Sample<{ str: string }>
-
-interface Service<T> {
-  service(t: T): T
-}
-
-function f<T extends Service<T>>(x: T) {
-  return x.service(x)
-}
-
-export { Base, InheritA, Sample, objA, objC, Service, f }
+const obj2 = new DataContainer<number>()
+obj2.data = 1

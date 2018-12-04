@@ -1,24 +1,11 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-class Base {
-    constructor(str) {
-        this.str = str;
+class DataContainer {
+    print() {
+        console.log(this.data);
     }
 }
-exports.Base = Base;
-class InheritA extends Base {
-    constructor(num) {
-        super('TS');
-        this.num = num;
-    }
-}
-exports.InheritA = InheritA;
-let objA;
-exports.objA = objA;
-// let objB: Sample<RegExp>
-let objC;
-exports.objC = objC;
-function f(x) {
-    return x.service(x);
-}
-exports.f = f;
+const obj1 = new DataContainer();
+obj1.data = '';
+// obj1.data = 1
+const obj2 = new DataContainer();
+obj2.data = 1;
