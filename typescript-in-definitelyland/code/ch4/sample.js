@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 let a;
 exports.a = a;
 exports.a = a = 'str';
+exports.a = a = true;
 // a = 1
 let b1;
 exports.b1 = b1;
