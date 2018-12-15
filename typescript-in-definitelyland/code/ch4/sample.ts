@@ -1,19 +1,18 @@
-type Point = [number, number]
-type Circle = [Point, number]
+type Suit = 'Heart' | 'Diamond' | 'Club' | 'Spade'
 
-let c: Circle = [[1, 2], 3]
+let suit: Suit = 'Heart'
+// suit = 'Joker'
 
-{
-  class Point {
-    constructor(public x: number, public y: number) {}
-  }
+type Digit = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7
+type Bool = true | false
+type Falsy = false | 0 | '' | null | undefined
 
-  class Circle {
-    constructor(public p: Point, public r: number) {}
-  }
-
-  let c2: Circle = new Circle(new Point(1, 2), 3)
-  console.log(c2.p, c2.r)
+enum SuitEnum {
+  Heart,
+  Diamond,
+  Club,
+  Spade,
 }
+type RedSuit = SuitEnum.Heart | SuitEnum.Diamond
 
-export { Point, Circle, c }
+export { Suit, suit, Digit, Bool, Falsy, SuitEnum, RedSuit }
