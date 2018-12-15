@@ -1,16 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-function testA() {
-    console.log(this.toUpperCase());
-}
-testA.bind('TypeScript')();
-// testA()
-// testA('TypeScript')
-function testB() {
-    // console.log(this.toUpperCase())
-}
-exports.testB = testB;
-function testC(postfix) {
-    console.log(`${this.toUpperCase()}${postfix}`);
-}
-testC.bind('TypeScript')('!');
+let el1 = null;
+el1.addEventListener('click', function () {
+    this.innerText = 'Hi!';
+});
+el1.addEventListener('click', () => {
+    // this.innerText = 'Hi!'
+});
+let el2 = null;
+el2.addEventListener('click', function () {
+    this.innerText = 'Hi!';
+});
