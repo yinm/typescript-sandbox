@@ -1,31 +1,23 @@
-abstract class Node {
-  isStringNode(): this is StringNode {
-    return this instanceof StringNode
-  }
-  isNumberNode(): this is NumberNode {
-    return this instanceof NumberNode
-  }
+let obj: number | boolean | string = null as any
+
+typeof obj === 'string' && obj.charAt(0)
+// typeof obj === 'number' && obj.charAt(0)
+
+if (typeof obj === 'string' || typeof obj === 'boolean') {
+} else {
+  obj.toFixed(0)
 }
 
-class StringNode extends Node {
-  constructor(public text: string) {
-    super()
-  }
+typeof obj === 'string' ? obj.charAt(0) : obj
+
+if (typeof obj === 'string') {
+  obj.charAt(0)
+} else {
+  obj
 }
 
-class NumberNode extends Node {
-  constructor(public value: number) {
-    super()
-  }
+if (!(typeof obj !== 'string')) {
+  obj.charAt(0)
 }
-
-let nodes: Node[] = [new StringNode('TypeScript'), new NumberNode(8)]
-nodes.forEach(n => {
-  if (n.isStringNode()) {
-    console.log(n.text)
-  } else if (n.isNumberNode()) {
-    console.log(n.value)
-  }
-})
 
 export { }

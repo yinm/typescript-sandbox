@@ -1,31 +1,20 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-class Node {
-    isStringNode() {
-        return this instanceof StringNode;
-    }
-    isNumberNode() {
-        return this instanceof NumberNode;
-    }
+let obj = null;
+typeof obj === 'string' && obj.charAt(0);
+// typeof obj === 'number' && obj.charAt(0)
+if (typeof obj === 'string' || typeof obj === 'boolean') {
 }
-class StringNode extends Node {
-    constructor(text) {
-        super();
-        this.text = text;
-    }
+else {
+    obj.toFixed(0);
 }
-class NumberNode extends Node {
-    constructor(value) {
-        super();
-        this.value = value;
-    }
+typeof obj === 'string' ? obj.charAt(0) : obj;
+if (typeof obj === 'string') {
+    obj.charAt(0);
 }
-let nodes = [new StringNode('TypeScript'), new NumberNode(8)];
-nodes.forEach(n => {
-    if (n.isStringNode()) {
-        console.log(n.text);
-    }
-    else if (n.isNumberNode()) {
-        console.log(n.value);
-    }
-});
+else {
+    obj;
+}
+if (!(typeof obj !== 'string')) {
+    obj.charAt(0);
+}
