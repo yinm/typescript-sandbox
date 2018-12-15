@@ -4,5 +4,4 @@ interface Cat {
   age: number
 }
 
-type KindType = Cat['kind']
-type NameOrAge = Cat['name' | 'age']
+type CatPropertyNmaes = keyof Cat
