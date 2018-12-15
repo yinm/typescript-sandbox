@@ -1,13 +1,17 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-let el1 = null;
-el1.addEventListener('click', function () {
-    this.innerText = 'Hi!';
-});
-el1.addEventListener('click', () => {
-    // this.innerText = 'Hi!'
-});
-let el2 = null;
-el2.addEventListener('click', function () {
-    this.innerText = 'Hi!';
-});
+const obj1 = {
+    name: 'maya',
+    greeting() {
+        console.log(`Hello, ${this.name}`);
+        // console.log(`Hello, ${this.notExists}`)
+    }
+};
+console.log(obj1.greeting());
+const obj = {
+    hello() {
+        console.log(`Hello, ${this.name}`);
+        // console.log(`Hello, ${this.notExists}`)
+    }
+};
+obj.hello();

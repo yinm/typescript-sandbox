@@ -1,27 +1,26 @@
-interface HTMLBodyElement extends HTMLElement {
-  addEventListener(
-    type: 'click',
-    listener: (this: this, ev: MouseEvent) => any,
-    useCapture?: boolean
-  ): void
-  addEventListener(
-    type: string,
-    listener: EventListenerOrEventListenerObject,
-    useCapture?: boolean
-  ): void
+const obj1 = {
+  name: 'maya',
+  greeting() {
+    console.log(`Hello, ${this.name}`)
+    // console.log(`Hello, ${this.notExists}`)
+  }
+}
+console.log(obj1.greeting())
+
+interface A {
+  name: string
+}
+interface B {
+  hello(): void
 }
 
-let el1: HTMLBodyElement = null as any
-el1.addEventListener('click', function() {
-  this.innerText = 'Hi!'
-})
-el1.addEventListener('click', () => {
-  // this.innerText = 'Hi!'
-})
+const obj: B & ThisType<A> = {
+  hello() {
+    console.log(`Hello, ${this.name}`)
+    // console.log(`Hello, ${this.notExists}`)
+  }
+}
 
-let el2: HTMLDivElement = null as any
-el2.addEventListener('click', function() {
-  this.innerText = 'Hi!'
-})
+obj.hello()
 
 export { }
