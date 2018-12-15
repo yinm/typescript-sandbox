@@ -1,24 +1,16 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-class A {
-    a() {
-        return this;
-    }
-    d(arg) {
-        return arg;
-    }
-    e() {
-        return this;
-    }
+function testA() {
+    console.log(this.toUpperCase());
 }
-class B extends A {
-    b() {
-        console.log('B');
-    }
+testA.bind('TypeScript')();
+// testA()
+// testA('TypeScript')
+function testB() {
+    // console.log(this.toUpperCase())
 }
-new B().a().e().b();
-new B().d(new B()).b();
-// new B().d(new A()).b()
-new B()._this.b();
-let c = null;
-c.a().c();
+exports.testB = testB;
+function testC(postfix) {
+    console.log(`${this.toUpperCase()}${postfix}`);
+}
+testC.bind('TypeScript')('!');
