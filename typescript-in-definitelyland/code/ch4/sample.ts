@@ -1,20 +1,8 @@
-let v1: string | number = 'a'
-if (typeof v1 === 'string') {
-  let f = () => {
-    // console.log(v1.toUpperCase())
-  }
-
-  f()
-
-  v1 = 1
-  f()
+let obj: number | string = null as any
+if (typeof obj === 'string') {
+  obj.charAt(0)
+} else {
+  obj.toFixed(2)
 }
 
-const v2: string | number = null as any
-if (typeof v2 === 'string') {
-  let f = () => {
-    console.log(v2.toUpperCase())
-  }
-  f()
-}
-
+export { }

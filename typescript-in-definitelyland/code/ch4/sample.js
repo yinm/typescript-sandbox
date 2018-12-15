@@ -1,17 +1,9 @@
 "use strict";
-let v1 = 'a';
-if (typeof v1 === 'string') {
-    let f = () => {
-        // console.log(v1.toUpperCase())
-    };
-    f();
-    v1 = 1;
-    f();
+Object.defineProperty(exports, "__esModule", { value: true });
+let obj = null;
+if (typeof obj === 'string') {
+    obj.charAt(0);
 }
-const v2 = null;
-if (typeof v2 === 'string') {
-    let f = () => {
-        console.log(v2.toUpperCase());
-    };
-    f();
+else {
+    obj.toFixed(2);
 }
