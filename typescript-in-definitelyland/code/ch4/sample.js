@@ -1,9 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-class Foo {
-    method() {
-        let obj = 1;
-        console.log(obj);
+class Sample {
+    constructor(bye) {
+        this.bye = bye;
+        this.hello = (word = 'TypeScript') => `Hello, ${word}`;
     }
 }
-exports.Foo = Foo;
+let obj = new Sample((word = 'TypeScript') => `Hello, ${word}`);
+obj.bye = obj.hello;
