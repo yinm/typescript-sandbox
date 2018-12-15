@@ -1,24 +1,47 @@
-interface Storage {
-  $save(): void
-}
-
-function mixinStorage<T>(base: T): T & Storage {
-  let modified = base as any
-  modified.$save = () => {
-    console.log(`データを保存しました！ ${JSON.stringify(base)}`)
+declare namespace angular.resource1 {
+  interface ResourceProvider {
+    create<T extends Resource<any>>(): T
   }
 
-  return modified
+  interface Resource<T> {
+    $insert(): T
+  }
+  let $resource: ResourceProvider
 }
 
-let base = {
-  name: 'TypeScript'
+namespace sample1 {
+  interface Sample {
+    str: string
+  }
+
+  interface SampleResource extends Sample, angular.resource1.Resource<Sample> {}
+
+  let $obj = angular.resource1.$resource.create<SampleResource>()
+  $obj.str = 'test'
+  let obj = $obj.$insert()
+  console.log(obj.str)
 }
-let obj = mixinStorage(base)
 
-obj.$save()
+declare namespace angular.resource2 {
+  interface ResourceProvider {
+    create<T>(): T & Resource<T>
+  }
 
-obj.name = 'JavaScript'
-obj.$save()
+  interface Resource<T> {
+    $insert(): T
+  }
+  let $resource: ResourceProvider
+}
 
-export { }
+namespace sample2 {
+  interface Sample {
+    str: string
+  }
+
+  let $obj = angular.resource2.$resource.create<Sample>()
+  $obj.str = 'test'
+  let obj = $obj.$insert()
+  console.log(obj.str)
+}
+
+export { sample1, sample2 }
