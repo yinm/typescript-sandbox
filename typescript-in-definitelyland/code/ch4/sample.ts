@@ -1,6 +1,8 @@
-type ConstructorA<T, U> = { new(s: string): T } & { new(...args: any[]): U }
-type ConstructorB<T, U> = { new(s: string): T & U }
+interface Cat {
+  kind: string
+  name: string
+  age: number
+}
 
-const A: ConstructorA<Date, RegExp> = null as any
-const B: ConstructorB<Date, RegExp> = A
-const A2: ConstructorA<Date, RegExp> = B
+type KindType = Cat['kind']
+type NameOrAge = Cat['name' | 'age']
