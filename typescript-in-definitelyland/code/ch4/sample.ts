@@ -1,9 +1,9 @@
-class Sample {
-  constructor(public bye: typeof Sample.prototype.hello) {}
-  hello = (word = 'TypeScript') => `Hello, ${word}`
-}
+let array = [1, 'str', true]
+// array[1].charAt(0)
 
-let obj = new Sample((word = 'TypeScript') => `Hello, ${word}`)
-obj.bye = obj.hello
+let tuple: [number, string, boolean] = [1, 'str', true]
+tuple[1].charAt(0)
 
-export { }
+tuple.forEach(v => console.log(v))
+
+export { array }
