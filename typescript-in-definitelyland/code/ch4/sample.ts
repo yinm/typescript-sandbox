@@ -1,31 +1,21 @@
-class A {
+class Sample {
   constructor(public str: string) {}
 }
 
-class B {
-  constructor(public num: number) {}
+let obj: Sample = {
+  str: 'Hi!'
 }
 
-class C {
-  constructor(public bool: boolean) {}
-}
-
-let obj: A | B | C = null as any
-if (obj instanceof A) {
-  obj.str
-  if (obj instanceof C) {
-    obj.bool
+function isSample(s: Sample): s is Sample {
+  if (!s) {
+    return false
   }
+
+  return typeof s.str === 'string'
 }
 
-if (obj instanceof C) {
-  obj.bool
-} else {
-  if (obj instanceof B) {
-    obj.num
-  } else {
-    obj.str
-  }
+if (isSample(obj)) {
+  console.log(obj.str)
 }
 
 export { }
