@@ -1,25 +1,24 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-let node = {
-    type: 'add',
-    left: {
-        type: 'add',
-        left: { type: 'leaf', value: 10 },
-        right: { type: 'leaf', value: 3 },
-    },
-    right: {
-        type: 'leaf',
-        value: 5,
+class A {
+    a() {
+        return this;
     }
-};
-console.log(calc(node));
-function calc(root) {
-    switch (root.type) {
-        case 'leaf':
-            return root.value;
-        case 'add':
-            return calc(root.left) + calc(root.right);
-        default:
-            throw new Error('unknown node');
+    d(arg) {
+        return arg;
+    }
+    e() {
+        return this;
     }
 }
+class B extends A {
+    b() {
+        console.log('B');
+    }
+}
+new B().a().e().b();
+new B().d(new B()).b();
+// new B().d(new A()).b()
+new B()._this.b();
+let c = null;
+c.a().c();

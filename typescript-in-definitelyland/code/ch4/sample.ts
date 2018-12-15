@@ -1,40 +1,37 @@
-interface Add {
-  type: 'add'
-  left: Tree
-  right: Tree
-}
+class A {
+  _this!: this
 
-interface Leaf {
-  type: 'leaf'
-  value: number
-}
+  a(): this {
+    return this
+  }
 
-type Tree = Add | Leaf
+  d(arg: this): this {
+    return arg
+  }
 
-let node: Tree = {
-  type: 'add',
-  left: {
-    type: 'add',
-    left: { type: 'leaf', value: 10 },
-    right: { type: 'leaf', value: 3 },
-  },
-  right: {
-    type: 'leaf',
-    value: 5,
+  e() {
+    return this
   }
 }
 
-console.log(calc(node))
-
-function calc(root: Tree): number {
-  switch (root.type) {
-    case 'leaf':
-      return root.value
-    case 'add':
-      return calc(root.left) + calc(root.right)
-    default:
-      throw new Error('unknown node')
+class B extends A {
+  b() {
+    console.log('B')
   }
 }
 
-export { }
+interface C extends A {
+  c(): void
+}
+
+new B().a().e().b()
+new B().d(new B()).b()
+
+// new B().d(new A()).b()
+
+new B()._this.b()
+
+let c: C = null as any
+c.a().c()
+
+export {}
