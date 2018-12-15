@@ -1,18 +1,24 @@
-class Sample {
-  private _tmp: any
+interface Storage {
+  $save(): void
+}
 
-  constructor(
-    public str: string,
-  ) {}
-
-  methodA() {
-    console.log(this._tmp)
+function mixinStorage<T>(base: T): T & Storage {
+  let modified = base as any
+  modified.$save = () => {
+    console.log(`データを保存しました！ ${JSON.stringify(base)}`)
   }
+
+  return modified
 }
 
-let obj: Sample = {
-  str: 'Hi',
-  _tmp: null,
+let base = {
+  name: 'TypeScript'
 }
+let obj = mixinStorage(base)
 
-export { obj }
+obj.$save()
+
+obj.name = 'JavaScript'
+obj.$save()
+
+export { }
