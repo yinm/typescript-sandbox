@@ -1,23 +1,13 @@
-let obj: number | boolean | string = null as any
-
-typeof obj === 'string' && obj.charAt(0)
-// typeof obj === 'number' && obj.charAt(0)
-
-if (typeof obj === 'string' || typeof obj === 'boolean') {
-} else {
-  obj.toFixed(0)
+class Sample {
+  constructor(public str: string) {}
 }
 
-typeof obj === 'string' ? obj.charAt(0) : obj
-
-if (typeof obj === 'string') {
-  obj.charAt(0)
-} else {
-  obj
+let obj: Sample = {
+  str: 'Hi!'
 }
 
-if (!(typeof obj !== 'string')) {
-  obj.charAt(0)
+if (obj instanceof Sample) {
+  console.log(obj.str)
 }
 
 export { }
