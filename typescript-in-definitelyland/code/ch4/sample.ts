@@ -1,26 +1,28 @@
-const obj1 = {
-  name: 'maya',
-  greeting() {
-    console.log(`Hello, ${this.name}`)
-    // console.log(`Hello, ${this.notExists}`)
+{
+  type Data = string | number
+  let obj: Data = 1
+
+  console.log(obj)
+}
+
+{
+  type Data = number | Date
+  let obj: Data = 1
+
+  console.log(obj)
+}
+
+// let obj: Data
+
+{
+  class Foo {}
+  enum Bar {
+    a,
+    b,
   }
-}
-console.log(obj1.greeting())
+  interface Buzz { }
 
-interface A {
-  name: string
+  console.log(Foo, Bar.a, null as any as Buzz)
 }
-interface B {
-  hello(): void
-}
-
-const obj: B & ThisType<A> = {
-  hello() {
-    console.log(`Hello, ${this.name}`)
-    // console.log(`Hello, ${this.notExists}`)
-  }
-}
-
-obj.hello()
 
 export { }
