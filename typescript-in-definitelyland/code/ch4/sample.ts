@@ -1,32 +1,6 @@
-type Constructor<T> = new (...args: any[]) => T
+type ConstructorA<T, U> = { new(s: string): T } & { new(...args: any[]): U }
+type ConstructorB<T, U> = { new(s: string): T & U }
 
-function Tagged<T extends Constructor<object>>(Base: T) {
-  return class extends Base {
-    tag = ''
-    constructor(...args: any[]) {
-      super(...args)
-    }
-  }
-}
-
-class Score {
-  constructor(public point: number) {}
-}
-
-const TaggedScore = Tagged(Score)
-
-const ts = new TaggedScore(1)
-ts.tag = 'vv'
-console.log(ts.tag, ts.point)
-
-// new TaggedScore('a')
-
-class RankingScore extends TaggedScore {
-  constructor(public rank: number, tag: string, point: number) {
-    super(point)
-    this.tag = tag
-  }
-}
-
-const rs = new RankingScore(1, 'vv', 100)
-console.log(rs.rank, rs.tag, rs.point)
+const A: ConstructorA<Date, RegExp> = null as any
+const B: ConstructorB<Date, RegExp> = A
+const A2: ConstructorA<Date, RegExp> = B
