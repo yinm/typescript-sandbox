@@ -1,13 +1,18 @@
 class Sample {
-  constructor(public str: string) {}
+  private _tmp: any
+
+  constructor(
+    public str: string,
+  ) {}
+
+  methodA() {
+    console.log(this._tmp)
+  }
 }
 
 let obj: Sample = {
-  str: 'Hi!'
+  str: 'Hi',
+  _tmp: null,
 }
 
-if (obj instanceof Sample) {
-  console.log(obj.str)
-}
-
-export { }
+export { obj }
