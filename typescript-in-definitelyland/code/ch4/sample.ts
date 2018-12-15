@@ -1,8 +1,19 @@
-let func: () => string
+function upperA(word?: string) {
+  if (word == null) {
+    word = 'TypeScript'
+  }
 
-let b: (() => string) | (() => boolean)
-let c: { (): string } | { (): boolean }
+  console.log(word.toUpperCase())
+}
 
-let d: (() => string)
+function upperB(word?: string) {
+  word = word || 'TypeScript'
 
-export { func, b, c, d }
+  console.log(word.toUpperCase())
+}
+
+function upperC(word = 'TypeScript') {
+  console.log(word.toUpperCase())
+}
+
+export { upperA, upperB, upperC }
