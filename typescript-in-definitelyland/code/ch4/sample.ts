@@ -1,13 +1,20 @@
-interface Foo {
-  value: number | string
+let v1: string | number = 'a'
+if (typeof v1 === 'string') {
+  let f = () => {
+    // console.log(v1.toUpperCase())
+  }
+
+  f()
+
+  v1 = 1
+  f()
 }
 
-let foo: Foo = {
-  value: 'TypeScript'
+const v2: string | number = null as any
+if (typeof v2 === 'string') {
+  let f = () => {
+    console.log(v2.toUpperCase())
+  }
+  f()
 }
 
-if (typeof foo.value === 'string') {
-  foo.value.toUpperCase()
-}
-
-export { }

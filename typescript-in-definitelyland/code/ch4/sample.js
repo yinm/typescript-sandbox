@@ -1,8 +1,17 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-let foo = {
-    value: 'TypeScript'
-};
-if (typeof foo.value === 'string') {
-    foo.value.toUpperCase();
+let v1 = 'a';
+if (typeof v1 === 'string') {
+    let f = () => {
+        // console.log(v1.toUpperCase())
+    };
+    f();
+    v1 = 1;
+    f();
+}
+const v2 = null;
+if (typeof v2 === 'string') {
+    let f = () => {
+        console.log(v2.toUpperCase());
+    };
+    f();
 }
